@@ -5,12 +5,12 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Mon Jan 27 21:53:09 2014 a
+## Last update Tue Jan 28 15:11:33 2014 a
 ##
 
 
 
-NAME	=	execute
+NAME	=	binaire
 
 SRCS	=	main.c
 
@@ -85,4 +85,4 @@ sup	:
 tot	:	sup
 		$(RM) $(FLAG2)
 
-.PHONY	:	all clean fclean re
+.PHONY	:	all abs clean clear exe fclean lib make_lib re spe sup tot
