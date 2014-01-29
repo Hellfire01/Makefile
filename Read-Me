@@ -1,0 +1,11 @@
+fonctions à développer :
+
+- Maths
+la racine carrée
+l'opposé
+l'inverse
+le cube
+
+- str
+affichage texte en couleur
+putchar && putstr ( prend 'write' directement )
