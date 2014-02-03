@@ -20,7 +20,6 @@ int     number2(char c);
 int     my_getnbr(char *str);
 int     my_put_nbr_base(int nbr, char *base);
 
+/* maths */
 
-
-
-
+int	car(int a);
