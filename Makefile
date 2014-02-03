@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Tue Jan 28 15:11:33 2014 a
+## Last update Mon Feb  3 23:21:22 2014 a
 ##
 
 
@@ -16,7 +16,7 @@ SRCS	=	main.c
 
 
 
-CC      =       cc
+CC      =       clang
 
 CD	=	cd
 
@@ -40,21 +40,17 @@ MINILIB	=	-L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/X11 -lXext -lX11
 
 OBJS    =       $(SRCS:.c=.o)
 
-OUT	=	../
-
 RM	=	rm -f
-
 
 
 
 all	:	make_lib $(NAME)
 
-abs	:	clear tot sp
+abs	:	clear tot all clean
 		$(LS)
 
 $(NAME)	:	$(OBJS)
-		$(CC) -o $(NAME) $(OBJS) $(LIB)
-## mettre $(#MINILIB) ( sans le '#' ) apres $(#LIB) en cas d'utilisation de la minilibX
+		$(CC) -o $(NAME) $(OBJS) $(LIB) #$(#MINILIB)
 
 clean	:
 		$(RM) $(OBJS)
@@ -75,14 +71,10 @@ make_lib:
 
 re	:	fclean all
 
-sp	:	all clean
-
 spe	:	clear all clean
 
-sup	:
+tot	:
 		$(RM) $(FLAG1)
-
-tot	:	sup
 		$(RM) $(FLAG2)
 
-.PHONY	:	all abs clean clear exe fclean lib make_lib re spe sup tot
+.PHONY	:	all abs clean clear exe fclean lib make_lib re spe tot
