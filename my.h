@@ -23,3 +23,5 @@ int     my_put_nbr_base(int nbr, char *base);
 /* maths */
 
 int	car(int a);
+int     expose(int nbr, int exposant);
+int     expose2(int nbr, int exposant);

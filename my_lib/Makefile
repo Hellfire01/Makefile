@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Sat Jan 25 01:59:17 2014 a
+## Last update Mon Feb  3 17:40:02 2014 a
 ##
 
 SRCS	= my_putchar.c \
@@ -20,7 +20,8 @@ SRCS	= my_putchar.c \
 	  my_strcmp.c \
 	  my_put_doublechar.c \
 	  my_strdup.c \
-	  my_free_doublechar.c
+	  my_free_doublechar.c \
+	  expose.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
