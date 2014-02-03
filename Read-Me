@@ -1,3 +1,8 @@
+!!! WARNING !!!
+ne pas utiliser le scipt deux fois de suite : il copie my_lib dans le dossier
+my_lib déjà présent ( et autant de fois que la commande est utiliée )
+
+
 fonctions à développer :
 
 - Maths
