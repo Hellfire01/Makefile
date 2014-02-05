@@ -1,3 +1,16 @@
+/*
+** my.h for header in /home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/my_lib
+** 
+** Made by a
+** Login   <raynau_a@epitech.net>
+** 
+** Started on  Wed Feb  5 15:47:38 2014 a
+** Last update Wed Feb  5 15:49:00 2014 a
+*/
+
+#ifndef MY_H_
+# define MY_H_
+
 int     my_put_doublechar(char **str);
 int     my_free_doublechar(char **str);
 char    *my_strdup(char *str);
@@ -25,3 +38,12 @@ int     my_put_nbr_base(int nbr, char *base);
 int	car(int a);
 int     expose(int nbr, int exposant);
 int     expose2(int nbr, int exposant);
+
+/* get_next_line */
+
+char    *my_realloc(char *str, int i);
+char    buffer_filler(int *ret, int fd, char *buffer, int *i);
+char    *get_next_line(const int fd);
+#define BUFF 2000
+
+#endif /* !MY_H_ */
