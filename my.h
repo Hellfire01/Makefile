@@ -1,3 +1,13 @@
+/*
+** my.h for header in /home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/my_lib
+** 
+** Made by a
+** Login   <raynau_a@epitech.net>
+** 
+** Started on  Wed Feb  5 15:47:38 2014 a
+** Last update Wed Feb  5 15:49:00 2014 a
+*/
+
 #ifndef MY_H_
 # define MY_H_
 
