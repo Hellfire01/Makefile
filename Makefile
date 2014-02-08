@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Mon Feb  3 23:21:22 2014 a
+## Last update Sat Feb  8 18:42:38 2014 a
 ##
 
 
@@ -20,7 +20,7 @@ CC      =       clang
 
 CD	=	cd
 
-CFLAGS  =	-Wall -Wextra
+CFLAGS  =	-W -Wall -Wextra -pedantic
 
 FLAG1	=	*~
 
