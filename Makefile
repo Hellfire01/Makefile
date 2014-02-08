@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Feb  8 18:42:38 2014 a
+## Last update Sat Feb  8 19:18:23 2014 a
 ##
 
 
@@ -20,7 +20,7 @@ CC      =       clang
 
 CD	=	cd
 
-CFLAGS  =	-W -Wall -Wextra -pedantic
+CFLAGS  =	-W -Wall -Wextra
 
 FLAG1	=	*~
 
@@ -46,7 +46,7 @@ RM	=	rm -f
 
 all	:	make_lib $(NAME)
 
-abs	:	clear tot all clean
+abs	:	clear tot fclean all clean
 		$(LS)
 
 $(NAME)	:	$(OBJS)
