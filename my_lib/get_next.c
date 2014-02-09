@@ -10,62 +10,53 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 #include "my.h"
+#define READ_MAX 2000
 
-char    *my_realloc(char *str, int i)
+char *my_realloc(char *old, int size)
 {
-  char  *out;
-  int   b;
+  int i;
+  char *new;
 
-  b = 0;
-  out = malloc(i + sizeof(char *));
-  if (out == NULL)
-    return (0);
-  while (i >= 0)
-    {
-      out[b] = str[b];
-      i--;
-      b++;;
-    }
-  free(str);
-  return (out);
-}
-
-char    buffer_filler(int *ret, int fd, char *buffer, int *i)
-{
-  if (*ret == 0)
-    {
-      *i = 0;
-      *ret = read(fd, buffer, BUFF);
-    }
-  return (*buffer);
-}
-
-char            *get_next_line(const int fd)
-{
-  char          *out;
-  static char   buffer[BUFF];
-  static int    i;
-  int           j;
-  static int    ret;
-
-  j = 0;
-  if (buffer[i++] == 10)
-    ret--;
-  *buffer = buffer_filler(&ret, fd, buffer, &i);
-  if (ret <= 0)
+  i = 0;
+  if ((new = malloc(sizeof(*new) * (my_strlen(old) + size))) == NULL)
     return (NULL);
-  out = malloc(sizeof(char *));
-  if (out == NULL)
-    return (0);
-  while (buffer[i] != 0 && buffer[i] != 10 && ret-- != 0)
+  while (old[i])
     {
-      out[j++] = buffer[i++];
-      out = my_realloc(out, j);
-      if (out == NULL)
-        return (0);
-      *buffer = buffer_filler(&ret, fd, buffer, &i);
+      new[i] = old[i];
+      i++;
     }
-  out[j] = 0;
-  return (out);
+  free(old);
+  return (new);
+}
+
+char *get_next_line(const int fd)
+{
+  static int last = 1;
+  static int rd = 0;
+  static int i = 0;
+  static char *res = NULL;
+  static char buf[READ_MAX];
+
+  if (buf[my_strlen(buf) - rd] == '\0')
+    {
+      if ((rd = read(fd, buf, READ_MAX)) <= 0)
+        return (res = (last-- && buf[my_strlen(buf) - rd - 1] != 10) ? res :\
+                NULL);
+      buf[rd] = '\0';
+    }
+  if ((res = (i == 0) ? malloc(sizeof(*res) * READ_MAX + 1) :
+       my_realloc(res, sizeof(*res) * READ_MAX + 1)) == NULL)
+    return (NULL);
+  while (buf[my_strlen(buf) - rd] && buf[my_strlen(buf) - rd] != '\n')
+    res[i++] = buf[my_strlen(buf) - rd--];
+  res[i] = '\0';
+  if (buf[my_strlen(buf) - rd] == '\n')
+    {
+      i = 0;
+      rd--;
+      return (res);
+    }
+  return (get_next_line(fd));
 }

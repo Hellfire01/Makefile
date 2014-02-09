@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Wed Feb  5 15:49:00 2014 a
+** Last update Sun Feb  9 19:18:51 2014 a
 */
 
 #ifndef MY_H_
@@ -41,9 +41,7 @@ int     expose2(int nbr, int exposant);
 
 /* get_next_line */
 
-char    *my_realloc(char *str, int i);
-char    buffer_filler(int *ret, int fd, char *buffer, int *i);
-char    *get_next_line(const int fd);
-#define BUFF 2000
+char *my_realloc(char *old, int size);
+char *get_next_line(const int fd);
 
 #endif /* !MY_H_ */
