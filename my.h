@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Wed Feb  5 15:49:00 2014 a
+** Last update Sun Feb  9 19:48:07 2014 a
 */
 
 #ifndef MY_H_
@@ -16,7 +16,7 @@ int     my_free_doublechar(char **str);
 char    *my_strdup(char *str);
 void    my_putchar(char c);
 int     my_isneg(int nb);
-void    my_put_nbr(int nb);
+void    my_putnbr(int nb);
 int     my_swap(int *a, int *b);
 int     my_putstr(char *str);
 int     my_strlen(char *str);
@@ -41,9 +41,7 @@ int     expose2(int nbr, int exposant);
 
 /* get_next_line */
 
-char    *my_realloc(char *str, int i);
-char    buffer_filler(int *ret, int fd, char *buffer, int *i);
-char    *get_next_line(const int fd);
-#define BUFF 2000
+char *my_realloc(char *old, int size);
+char *get_next_line(const int fd);
 
 #endif /* !MY_H_ */

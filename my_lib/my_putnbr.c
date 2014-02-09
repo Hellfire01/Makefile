@@ -5,10 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:32:59 2013 a
-** Last update Thu Jan  2 21:59:59 2014 a
+** Last update Sun Feb  9 19:47:33 2014 a
 */
 
-void    my_put_nbr(int nb)
+void    my_putnbr(int nb)
 {
   int   neg;
 
@@ -24,7 +24,7 @@ void    my_put_nbr(int nb)
       nb = nb * -1;
     }
   if (nb >= 10)
-    my_put_nbr(nb / 10);
+    my_putnbr(nb / 10);
   if (neg == 1)
     {
       neg = 0;

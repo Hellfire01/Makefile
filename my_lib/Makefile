@@ -5,12 +5,12 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Mon Feb  3 17:40:02 2014 a
+## Last update Sun Feb  9 19:48:29 2014 a
 ##
 
 SRCS	= my_putchar.c \
 	  my_isin.c \
-	  my_put_nbr.c \
+	  my_putnbr.c \
 	  my_put_nbr_base.c \
 	  my_swap.c \
 	  my_putstr.c \
