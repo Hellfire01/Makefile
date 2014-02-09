@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Tue Oct 29 19:36:15 2013 a
+** Last update Sun Feb  9 23:16:11 2014 a
 */
 
 #include	"my.h"
@@ -46,6 +46,10 @@ int	number(char c, char *base)
     return (0);
 }
 
+/*
+** !!! WARNING !!!
+** aucune vérification n'est faite sur str ( y a t il un nombre ? )
+*/
 
 int	my_getnbr_base(char *str, char *base)
 {
