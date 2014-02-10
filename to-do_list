@@ -1,3 +1,7 @@
 1)
 le my my_getnbr_base() ne vérifie pas s'il y a un nombre : il Segfault s'il
 n'y en a pas.
+L=> utiliser my_isin2() pour ça
+
+2)
+fonction verif n'apparait pas dans le my.h
