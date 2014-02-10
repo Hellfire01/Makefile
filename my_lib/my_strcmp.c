@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 16:06:59 2013 a
-** Last update Tue Oct 29 12:50:29 2013 a
+** Last update Mon Feb 10 16:18:37 2014 a
 */
+
+#include "my.h"
 
 int	my_strcmp(char *s1, char *s2)
 {

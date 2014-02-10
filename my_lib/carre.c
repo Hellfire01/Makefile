@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Jan 29 18:18:13 2014 a
-** Last update Wed Jan 29 18:20:22 2014 a
+** Last update Mon Feb 10 16:16:15 2014 a
 */
+
+#include "my.h"
 
 /*
 ** Cette fonction met un nombre au carré

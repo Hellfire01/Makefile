@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Sun Feb  9 23:16:11 2014 a
+** Last update Mon Feb 10 16:27:23 2014 a
 */
 
 #include	"my.h"
@@ -40,7 +40,7 @@ int	number(char c, char *base)
       if (base[counter] == '\0')
 	return (0);
     }
-  if (base[counter] = c)
+  if ((base[counter] = c))
     return (1);
   else
     return (0);

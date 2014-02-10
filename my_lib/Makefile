@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Sun Feb  9 19:48:29 2014 a
+## Last update Mon Feb 10 16:15:34 2014 a
 ##
 
 SRCS	= my_putchar.c \
@@ -39,7 +39,7 @@ all:    fclean $(NAME)
 	cp my.h ../my.h
 
 $(NAME):
-	cc -c $(SRCS)
+	cc -W -Wall -Wextra -c $(SRCS)
 	ar rc $(NAME) $(OBJS)
 
 clean:

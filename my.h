@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Sun Feb  9 19:48:07 2014 a
+** Last update Mon Feb 10 16:24:35 2014 a
 */
 
 #ifndef MY_H_
@@ -17,8 +17,8 @@ char    *my_strdup(char *str);
 void    my_putchar(char c);
 int     my_isneg(int nb);
 void    my_putnbr(int nb);
-int     my_swap(int *a, int *b);
-int     my_putstr(char *str);
+void	my_swap(int *a, int *b);
+void	my_putstr(char *str);
 int     my_strlen(char *str);
 int     my_getnbr(char *str);
 int     my_strcmp(char *s1, char *s2);

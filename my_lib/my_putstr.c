@@ -5,10 +5,12 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:36:38 2013 a
-** Last update Sat Jan 25 00:57:26 2014 a
+** Last update Mon Feb 10 16:24:23 2014 a
 */
 
-int	my_putstr(char *src)
+#include "my.h"
+
+void	my_putstr(char *src)
 {
   int	counter;
 

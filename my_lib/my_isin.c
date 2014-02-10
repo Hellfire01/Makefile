@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Thu Nov 14 14:57:49 2013 a
-** Last update Fri Jan 24 02:32:42 2014 a
+** Last update Mon Feb 10 16:17:05 2014 a
 */
+
+#include "my.h"
 
 int	my_isin(char c, char *str)
 {

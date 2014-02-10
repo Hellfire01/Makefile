@@ -5,10 +5,11 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:29:50 2014 a
-** Last update Mon Jan 27 21:40:29 2014 a
+** Last update Mon Feb 10 16:17:37 2014 a
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 /*
 ** la fonction my_put_doublechar affiche tout le contenu d'un tableau de char.

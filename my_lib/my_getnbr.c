@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Sun Feb  9 23:22:16 2014 a
+** Last update Mon Feb 10 16:26:24 2014 a
 */
 
 #include "my.h"
@@ -46,7 +46,7 @@ int	verif(char *str)
   int	i;
 
   i = 0;
-  while (str[i] != NULL)
+  while (str[i] != '\0')
     {
       if (str[i] >= '0' && str[i] <= '9')
 	return (0);

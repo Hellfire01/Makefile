@@ -5,10 +5,11 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:30:46 2014 a
-** Last update Fri Jan 24 02:38:37 2014 a
+** Last update Mon Feb 10 16:18:46 2014 a
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 /*
 ** my_strdup malloc une chaine de caractères et renvoie un pointeur sue la

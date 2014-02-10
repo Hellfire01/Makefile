@@ -5,10 +5,11 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:32:59 2014 a
-** Last update Fri Jan 24 02:37:57 2014 a
+** Last update Mon Feb 10 16:16:36 2014 a
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 /*
 ** la fonction my_free_doublechar libère tout le contenu d'un tableau de char.

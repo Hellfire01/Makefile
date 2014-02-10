@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:32:59 2013 a
-** Last update Sat Jan 25 00:54:53 2014 a
+** Last update Mon Feb 10 16:18:07 2014 a
 */
+
+#include "my.h"
 
 int	my_put_nbr_base(int nbr, char *base)
 {

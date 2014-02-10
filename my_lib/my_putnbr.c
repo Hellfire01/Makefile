@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:32:59 2013 a
-** Last update Sun Feb  9 19:47:33 2014 a
+** Last update Mon Feb 10 16:18:17 2014 a
 */
+
+#include "my.h"
 
 void    my_putnbr(int nb)
 {

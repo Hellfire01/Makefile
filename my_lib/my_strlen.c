@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:38:12 2013 a
-** Last update Thu Oct 10 15:50:31 2013 a
+** Last update Mon Feb 10 16:19:09 2014 a
 */
+
+#include "my.h"
 
 int	my_strlen(char *str)
 {
