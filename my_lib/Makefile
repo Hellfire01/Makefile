@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Thu Feb 13 21:05:44 2014 a
+## Last update Fri Feb 14 00:19:28 2014 a
 ##
 
 SRCS	= my_putchar.c \
@@ -37,6 +37,8 @@ RM	=	rm -f
 
 all:    fclean $(NAME)
 	rm *.o
+	$(RM) $(FLAG1)
+	$(RM) $(FLAG2)
 	cp libmy.a ../libmy.a
 	cp my.h ../my.h
 

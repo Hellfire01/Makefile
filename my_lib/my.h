@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Thu Feb 13 21:00:16 2014 a
+** Last update Fri Feb 14 00:17:23 2014 a
 */
 
 #ifndef MY_H_
@@ -20,7 +20,6 @@ void    my_putnbr(int nb);
 void	my_swap(int *a, int *b);
 void	my_putstr(char *str);
 int     my_strlen(char *str);
-int     my_getnbr(char *str);
 int     my_strcmp(char *s1, char *s2);
 int     my_isin(char c, char *str);
 int     my_isin2(char *str, char c);
@@ -31,6 +30,7 @@ int     my_getnbr_base(char *str, char *base);
 int     neg2(char *str);
 int     number2(char c);
 int     my_getnbr(char *str);
+int     verif(char *str);
 int     my_put_nbr_base(int nbr, char *base);
 
 /* maths */
