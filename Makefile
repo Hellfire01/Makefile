@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Thu Feb 13 17:26:59 2014 a
+## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
 
@@ -48,13 +48,14 @@ RM	=	rm -f
 
 all	:	make_lib $(NAME)
 
-abs	:	clear tot fclean all clean
+abs	:	clear tot fclean all
+		$(RM) $(OBJS)
 		$(LS)
 ## commande utile ==> vous compillez avec flags et vous nettoie les fichiers temporaires
 
 
 $(NAME)	:	$(OBJS)
-		$(CC) -o $(NAME) $(OBJS) $(LIB) #$(#MINILIB)
+		$(CC) -o $(NAME) $(OBJS) $(LIB) $(#MINILIB)
 
 clean	:
 		$(RM) $(OBJS)
