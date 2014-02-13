@@ -5,3 +5,6 @@ L=> utiliser my_isin2() pour ça
 
 2)
 fonction verif n'apparait pas dans le my.h
+
+3)
+adapter somme_tab() à un overflow

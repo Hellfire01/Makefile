@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Mon Feb 10 16:24:35 2014 a
+** Last update Thu Feb 13 21:00:16 2014 a
 */
 
 #ifndef MY_H_
@@ -38,6 +38,7 @@ int     my_put_nbr_base(int nbr, char *base);
 int	car(int a);
 int     expose(int nbr, int exposant);
 int     expose2(int nbr, int exposant);
+int     tab_produit(int *tab, int lignes);
 
 /* get_next_line */
 
