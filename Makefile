@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Feb  8 19:18:23 2014 a
+## Last update Thu Feb 13 17:26:59 2014 a
 ##
 
 
@@ -22,6 +22,8 @@ CD	=	cd
 
 CFLAGS  =	-W -Wall -Wextra
 
+ENV	=	env -i
+
 FLAG1	=	*~
 
 FLAG2	=	*\#
@@ -34,7 +36,7 @@ LIB	=	libmy.a
 
 LIB-DIR	=	my_lib
 
-LS      =       ls
+LS      =       ls -a --color
 
 MINILIB	=	-L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/X11 -lXext -lX11
 
@@ -48,6 +50,8 @@ all	:	make_lib $(NAME)
 
 abs	:	clear tot fclean all clean
 		$(LS)
+## commande utile ==> vous compillez avec flags et vous nettoie les fichiers temporaires
+
 
 $(NAME)	:	$(OBJS)
 		$(CC) -o $(NAME) $(OBJS) $(LIB) #$(#MINILIB)
@@ -58,8 +62,15 @@ clean	:
 clear	:
 		$(CLEAR)
 
+env     :       abs
+		$(ENV) $(EXE)$(NAME)
+## lance le bianaire sans environnement ( très recommandés pour le minilibX et le minishell )
+
+
 exe	:	abs
 		$(EXE)$(NAME)
+## lance le binaire en plus
+
 
 fclean	:	clean
 		$(RM) $(NAME)
@@ -77,4 +88,4 @@ tot	:
 		$(RM) $(FLAG1)
 		$(RM) $(FLAG2)
 
-.PHONY	:	all abs clean clear exe fclean lib make_lib re spe tot
+.PHONY	:	all abs clean clear env exe fclean lib make_lib re spe tot
