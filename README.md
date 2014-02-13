@@ -1,7 +1,7 @@
 Quelques conseils d'utilisation :
 
 ===Makefile===
-les options qui interessent le plaus sont :
+les options qui interessent le plus sont :
   - abs ( recompile la lib, élimine les fichiers temporaires, compile
           avec des flags )
   - exe ( fait la même chose que abs et lance le binaire en plus )
