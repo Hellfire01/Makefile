@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Feb  8 19:18:23 2014 a
+## Last update Wed Feb 19 19:20:06 2014 matthieu raynaud de fitte
 ##
 
 
@@ -16,7 +16,7 @@ SRCS	=	main.c
 
 
 
-CC      =       clang
+CC      =       gcc
 
 CD	=	cd
 
