@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Mon Feb 10 16:30:59 2014 a
+## Last update Fri Feb 14 00:19:28 2014 a
 ##
 
 SRCS	= my_putchar.c \
@@ -22,7 +22,8 @@ SRCS	= my_putchar.c \
 	  my_strdup.c \
 	  my_free_doublechar.c \
 	  expose.c \
-	  get_next.c
+	  get_next.c \
+	  tab_somme.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
@@ -36,6 +37,8 @@ RM	=	rm -f
 
 all:    fclean $(NAME)
 	rm *.o
+	$(RM) $(FLAG1)
+	$(RM) $(FLAG2)
 	cp libmy.a ../libmy.a
 	cp my.h ../my.h
 

@@ -4,4 +4,4 @@ n'y en a pas.
 L=> utiliser my_isin2() pour ça
 
 2)
-fonction verif n'apparait pas dans le my.h
+adapter somme_tab() à un overflow

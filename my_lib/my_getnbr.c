@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Mon Feb 10 16:26:24 2014 a
+** Last update Thu Feb 13 19:29:04 2014 a
 */
 
 #include "my.h"
@@ -63,7 +63,7 @@ int	my_getnbr(char *str)
 
   nbr = 0;
   counter = 0;
-  message = "la taille de l'int est depassee";
+  message = "WARNING : le nombre est trop grand pour un int\n";
   if (verif(str) == 1)
     return (0);
   while (number2(str[counter]) == 0)
