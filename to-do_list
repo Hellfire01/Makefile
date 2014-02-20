@@ -4,4 +4,21 @@ n'y en a pas.
 L=> utiliser my_isin2() pour ça
 
 2)
-adapter somme_tab() à un overflow
+adapter somme_tab() à un overflow.
+
+3)
+fonctions à développer :
+
+   - Maths
+  la racine carrée
+  l'opposé
+  l'inverse
+  le cube
+
+   - str
+  affichage texte en couleur
+  putchar && putstr ( prend 'write' directement )
+
+4)
+copy.sh doit être adapté de façon à ne pas copier my_lib dans le my_lib déjà présent
+s'il y en a déjà un.

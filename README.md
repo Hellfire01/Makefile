@@ -7,6 +7,8 @@ les options qui interessent le plus sont :
           avec des flags )
   - exe ( fait la même chose que abs et lance le binaire en plus )
   - env ( lance le binaire en env -i )
+  - test1 ( vérifie les read )
+  - test2 ( vérifie l'affichage )
 
 ===copy.sh===
 
@@ -17,7 +19,7 @@ chaque nouveau projet avec une simple commande shell.
 
 
 
-Merci de laisser un commentaire pour amméliorer le système
+Merci de laisser un commentaire pour pouvoir amméliorer le tout !
 
 
 made by raynau_a, EPITECH, promo 2018

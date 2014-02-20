@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Feb 19 19:22:53 2014 matthieu raynaud de fitte
+## Last update Thu Feb 20 17:55:49 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -16,6 +16,8 @@ NAME	=	binaire
 SRCS	=	main.c
 
 
+
+CAT	=	cat -e
 
 CC      =       gcc
 
@@ -30,6 +32,8 @@ FLAG1	=	*~
 FLAG2	=	*\#
 
 CLEAR   =       clear
+
+ECHO_V	=	encho |
 
 EXE     =       ./
 
@@ -52,8 +56,6 @@ all	:	make_lib $(NAME)
 abs	:	clear tot fclean all
 		$(RM) $(OBJS)
 		$(LS)
-## commande utile ==> vous compillez avec flags et vous nettoie les fichiers temporaires
-
 
 $(NAME)	:	$(OBJS)
 		$(CC) -o $(NAME) $(OBJS) $(LIB) $(#MINILIB)
@@ -66,28 +68,26 @@ clear	:
 
 env     :       abs
 		$(ENV) $(EXE)$(NAME)
-## lance le bianaire sans environnement ( très recommandés pour le minilibX et le minishell )
-
 
 exe	:	abs
 		$(EXE)$(NAME)
-## lance le binaire en plus
-
 
 fclean	:	clean
 		$(RM) $(NAME)
 
-lib	:	make_lib
-
-make_lib:
+lib	:
 		$(CD) $(LIB-DIR) && $(MAKE)
 
 re	:	fclean all
 
-spe	:	clear all clean
+test1	:	abs
+		$(ECHO_V) $(EXE)$(NAME)
+
+test2	:	abs
+		$(EXE)$(NAME) | $(CAT)
 
 tot	:
 		$(RM) $(FLAG1)
 		$(RM) $(FLAG2)
 
-.PHONY	:	all abs clean clear env exe fclean lib make_lib re spe tot
+.PHONY	:	all abs clean clear env exe fclean lib re test1 test2 tot
