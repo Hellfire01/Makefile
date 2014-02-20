@@ -12,7 +12,7 @@ les options qui interessent le plus sont :
 
 ===copy.sh===
 
-mettre son path sur le binaire dans le script puis mettre un alias dans
+mettre le chemin sur le script dans le script puis mettre un alias dans
 le .bashrc, cela pemettre d'avoir une base ( lib, Makefile, ... ) pour
 chaque nouveau projet avec une simple commande shell.
 
