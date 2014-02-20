@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Thu Feb 13 19:29:04 2014 a
+** Last update Thu Feb 20 18:31:33 2014 matthieu raynaud de fitte
 */
 
 #include "my.h"
@@ -54,6 +54,10 @@ int	verif(char *str)
     }
   return (1);
 }
+
+/*
+** Si aucun nombre n'est trouvé, my_getnbr() renvoie 0
+*/
 
 int	my_getnbr(char *str)
 {

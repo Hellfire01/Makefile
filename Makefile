@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Thu Feb 20 17:55:49 2014 matthieu raynaud de fitte
+## Last update Thu Feb 20 19:11:53 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -19,7 +19,7 @@ SRCS	=	main.c
 
 CAT	=	cat -e
 
-CC      =       gcc
+CC      =       cc
 
 CD	=	cd
 
@@ -33,7 +33,7 @@ FLAG2	=	*\#
 
 CLEAR   =       clear
 
-ECHO_V	=	encho |
+ECHO_V	=	echo |
 
 EXE     =       ./
 
@@ -51,7 +51,7 @@ RM	=	rm -f
 
 
 
-all	:	make_lib $(NAME)
+all	:	lib $(NAME)
 
 abs	:	clear tot fclean all
 		$(RM) $(OBJS)

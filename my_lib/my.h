@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Thu Feb 20 16:33:02 2014 matthieu raynaud de fitte
+** Last update Thu Feb 20 18:37:45 2014 matthieu raynaud de fitte
 */
 
 #ifndef MY_H_
@@ -29,6 +29,7 @@ int     my_isin3(char *str, int posision, char caracter);
 int     neg(char *str, char *base, int basemax);
 int     number(char c, char *base);
 int     my_getnbr_base(char *str, char *base);
+int	verif2(char *str, char *base);
 /* my_getnbr.c */
 int     neg2(char *str);
 int     number2(char c);

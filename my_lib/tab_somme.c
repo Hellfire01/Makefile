@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Thu Feb 13 20:48:54 2014 a
-** Last update Thu Feb 13 20:58:51 2014 a
+** Last update Thu Feb 20 19:14:31 2014 matthieu raynaud de fitte
 */
 
 /*
@@ -16,11 +16,18 @@ int	tab_produit(int *tab, int lignes)
 {
   int	i;
   int	out;
+  char	*message;
 
   i = 0;
   out = 0;
+  message = "WARNING : le nombre est trop grand pour un int\n";
   while (i < lignes)
     {
+      if (out >= 214748364 && tab[i] >= 7)
+        {
+          my_putstr(message);
+          return (0);
+        }
       out = out + tab[i];
       i = i + 1;
     }
