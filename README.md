@@ -13,8 +13,9 @@ les options qui interessent le plus sont :
 ===copy.sh===
 
 mettre le chemin sur le script dans le script puis mettre un alias dans
-le .bashrc, cela pemettre d'avoir une base ( lib, Makefile, ... ) pour
-chaque nouveau projet avec une simple commande shell.
+le .bashrc, cela pemet d'avoir une base ( lib, Makefile, ... ) pour
+chaque nouveau projet avec une simple commande shell ( gain de temps
+garantit ! ).
 
 
 
