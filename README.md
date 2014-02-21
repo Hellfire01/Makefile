@@ -2,7 +2,7 @@ Quelques conseils d'utilisation :
 
 ===Makefile===
 
-les options qui interessent le plus sont :
+les commandes spéciales de ce Makefile sont :
   - abs ( recompile la lib, élimine les fichiers temporaires, compile
           avec des flags )
   - exe ( fait la même chose que abs et lance le binaire en plus )
