@@ -5,8 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Thu Feb 13 20:48:54 2014 a
-** Last update Thu Feb 20 19:14:31 2014 matthieu raynaud de fitte
+** Last update Fri Feb 21 22:17:24 2014 matthieu raynaud de fitte
 */
+
+#include "my.h"
 
 /*
 ** Cette fonction vise à renvoyer la somme du contenu d'un tableau d'int
