@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Thu Feb 20 18:37:45 2014 matthieu raynaud de fitte
+** Last update Sat Feb 22 18:10:05 2014 matthieu raynaud de fitte
 */
 
 #ifndef MY_H_
@@ -21,6 +21,7 @@ void	my_putstr(char *str);
 int     my_strlen(char *str);
 int     my_strcmp(char *s1, char *s2);
 int     my_put_nbr_base(int nbr, char *base);
+void    l_init(char *l, int taille);
 /* my_isin.c */
 int     my_isin(char c, char *str);
 int     my_isin2(char *str, char c);
