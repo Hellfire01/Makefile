@@ -7,8 +7,8 @@ les commandes spéciales de ce Makefile sont :
           avec des flags )
   - exe ( fait la même chose que abs et lance le binaire en plus )
   - env ( lance le binaire en env -i )
-  - test1 ( vérifie les read )
-  - test2 ( vérifie l'affichage )
+  - test1 ( vérifie les read ==> echo | ./binaire)
+  - test2 ( vérifie l'affichage ==> ./binaire | cat -e)
 
 ===copy.sh===
 
