@@ -5,13 +5,14 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Sat Feb 22 18:49:16 2014 matthieu raynaud de fitte
-** Last update Sat Feb 22 19:16:36 2014 matthieu raynaud de fitte
+** Last update Mon Feb 24 20:57:40 2014 matthieu raynaud de fitte
 */
 
 #include "my.h"
 
 /*
 ** c_str() est un my_putstr() en couleur
+** en cas d'erreur, aucune couleur n'est mise
 */
 
 int	c_str(char *str, char color)
@@ -19,6 +20,7 @@ int	c_str(char *str, char color)
   my_color(color);
   my_putstr(str);
   my_putstr("\033[0;0m");
+  return (0);
 }
 
 /*
