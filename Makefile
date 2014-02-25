@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Thu Feb 20 19:11:53 2014 matthieu raynaud de fitte
+## Last update Tue Feb 25 17:15:07 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -25,13 +25,13 @@ CD	=	cd
 
 CFLAGS  =	-W -Wall -Wextra
 
+CLEAR	=	clear
+
 ENV	=	env -i
 
 FLAG1	=	*~
 
 FLAG2	=	*\#
-
-CLEAR   =       clear
 
 ECHO_V	=	echo |
 
@@ -53,7 +53,7 @@ RM	=	rm -f
 
 all	:	lib $(NAME)
 
-abs	:	clear tot fclean all
+abs	:	clear tot re
 		$(RM) $(OBJS)
 		$(LS)
 
