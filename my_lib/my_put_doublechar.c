@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:29:50 2014 a
-** Last update Mon Feb 24 22:28:06 2014 matthieu raynaud de fitte
+** Last update Wed Feb 26 22:40:09 2014 matthieu raynaud de fitte
 */
 
 #include <stdlib.h>
@@ -23,11 +23,8 @@ int     my_put_doublechar(char **str)
   a = 0;
   while (str[a] != NULL)
     {
-      if (str[a][0] != '\0')
-	{
-	  my_putstr(str[a]);
-	  my_putchar('\n');
-	}
+      my_putstr(str[a]);
+      my_putchar('\n');
       a = a + 1;
     }
   return (0);
