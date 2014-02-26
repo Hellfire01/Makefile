@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Wed Feb 26 18:25:11 2014 matthieu raynaud de fitte
+## Last update Wed Feb 26 20:33:06 2014 matthieu raynaud de fitte
 ##
 
 SRCS	= my_putchar.c \
@@ -30,6 +30,8 @@ SRCS	= my_putchar.c \
 
 OBJS	= 	$(SRCS:.c=.o)
 
+ECHO	=	echo -e
+
 NAME	= 	libmy.a
 
 FLAG1   =	*~
@@ -38,28 +40,38 @@ FLAG2   =       *\#
 
 RM	=	rm -f
 
-all:    fclean $(NAME)
-	$(RM) $(FLAG1)
-	$(RM) $(FLAG2)
-	cp libmy.a ../libmy.a
-	cp my.h ../my.h
-	$(RM) $(OBJS)
+all	:	disp2 fclean disp $(NAME)
+		@$(ECHO) '\033[0;33m>> suppression de tous les fichiers temporaires  \033[0m'
+		$(RM) $(FLAG1)
+		$(RM) $(FLAG2)
+		$(RM) $(OBJS)
+		@$(ECHO) '\033[0;33m>> copie de la libmy.a et du my.h \033[0m'
+		cp libmy.a ../libmy.a
+		cp my.h ../my.h
 
-$(NAME):
-	cc -W -Wall -Wextra -c $(SRCS)
-	ar rc $(NAME) $(OBJS)
+$(NAME)	:
+		cc -W -Wall -Wextra -c $(SRCS)
+		ar rc $(NAME) $(OBJS)
 
-clean:
-	$(RM) $(OBJS)
+disp	:
+		@$(ECHO) '\033[0;33m>> compilation de la libmy.a \033[0m'
 
-fclean:	clean
-	$(RM) $(NAME)
+disp2	:
+		@$(ECHO) '\033[0;33m>> suppression des fichiers temporaires \033[0m'
 
-spe:	all
-	rm *.o
+clean	:
+		$(RM) $(OBJS)
 
-re:	fclean all
+fclean	:	clean
+		$(RM) $(NAME)
 
-tot:
-	$(RM) $(FLAG1)
-	$(RM) $(FLAG2)
+spe	:	all
+		rm *.o
+
+re	:	fclean all
+
+tot	:
+		$(RM) $(FLAG1)
+		$(RM) $(FLAG2)
+
+.PHONY	: all disp disp2 clean fclean spe re tot
