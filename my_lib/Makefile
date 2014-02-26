@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Wed Feb 26 20:33:06 2014 matthieu raynaud de fitte
+## Last update Wed Feb 26 20:45:15 2014 matthieu raynaud de fitte
 ##
 
 SRCS	= my_putchar.c \
@@ -41,11 +41,11 @@ FLAG2   =       *\#
 RM	=	rm -f
 
 all	:	disp2 fclean disp $(NAME)
-		@$(ECHO) '\033[0;33m>> suppression de tous les fichiers temporaires  \033[0m'
+		@$(ECHO) '\033[0;33m>> suppression de tous les fichiers temporaires - (3/4) \033[0m'
 		$(RM) $(FLAG1)
 		$(RM) $(FLAG2)
 		$(RM) $(OBJS)
-		@$(ECHO) '\033[0;33m>> copie de la libmy.a et du my.h \033[0m'
+		@$(ECHO) '\033[0;33m>> copie de la libmy.a et du my.h - - - - - - - - (4/4) \033[0m'
 		cp libmy.a ../libmy.a
 		cp my.h ../my.h
 
@@ -54,10 +54,10 @@ $(NAME)	:
 		ar rc $(NAME) $(OBJS)
 
 disp	:
-		@$(ECHO) '\033[0;33m>> compilation de la libmy.a \033[0m'
+		@$(ECHO) '\033[0;33m>> compilation de la libmy.a  - - - - - - - - - - (2/4) \033[0m'
 
 disp2	:
-		@$(ECHO) '\033[0;33m>> suppression des fichiers temporaires \033[0m'
+		@$(ECHO) '\033[0;33m>> suppression des fichiers temporaires - - - - - (1/4) \033[0m'
 
 clean	:
 		$(RM) $(OBJS)
