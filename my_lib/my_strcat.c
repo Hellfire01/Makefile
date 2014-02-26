@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb 26 18:10:31 2014 matthieu raynaud de fitte
-** Last update Wed Feb 26 18:42:38 2014 matthieu raynaud de fitte
+** Last update Wed Feb 26 21:42:59 2014 matthieu raynaud de fitte
 */
 
 #include "my.h"
@@ -14,14 +14,16 @@
 char	*my_strcat(char *stra, char *strb)
 {
   char	*out;
+  int	len;
   int	i;
   int	a;
 
   i = 0;
   a = 0;
-  if ((out = malloc((my_strlen(stra) + my_strlen(strb) + 1) *
-		    sizeof(char))) == NULL)
+  len = my_strlen(stra) + my_strlen(strb) + 1;
+  if ((out = malloc((len) * sizeof(char))) == NULL)
     return (NULL);
+  l_init(out, len);
   while (stra[i] != '\0')
     {
       out[i] = stra[i];
