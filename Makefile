@@ -5,16 +5,15 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Feb 26 21:09:09 2014 matthieu raynaud de fitte
+## Last update Wed Feb 26 21:17:25 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
 
 
-NAME	=	binaire
+NAME    =       binaire
 
-SRCS	=	main.c
-
+SRCS    =       main.c
 
 
 CAT	=	cat -e
@@ -59,7 +58,7 @@ all_bis	:	disp1_5 lib disp2_5 $(NAME)
 
 abs	:	clear disp0_5 tot fclean all_bis
 		$(RM) $(OBJS)
-		@$(ECHO) '\033[0;32m>> compilation réussie  - - - - - - - - - (4/4)\033[0m'
+		@$(ECHO) '\033[0;32m (4/4) >> compilation réussie\033[0m'
 		$(LS)
 
 $(NAME)	:	$(OBJS)
@@ -75,19 +74,19 @@ disp0	:
 		@$(ECHO) '\033[0;32m>> suppression des fichiers temporaires  \033[0m'
 
 disp0_5 :
-		@$(ECHO) '\033[0;32m>> suppression des fichiers temporaires - (1/4)\033[0m'
+		@$(ECHO) '\033[0;32m (1/4) >> suppression des fichiers temporaires\033[0m'
 
 disp1	:	
 		@$(ECHO) '\033[0;32m>> compilation de la libmy.a \033[0m'
 
 disp1_5	:
-		@$(ECHO) '\033[0;32m>> compilation de la libmy.a  - - - - - - (2/4)\033[0m'
+		@$(ECHO) '\033[0;32m (2/4) >> compilation de la libmy.a\033[0m'
 
 disp2	:	
 		@$(ECHO) '\033[0;32m>> compilation du' $(NAME) '\033[0m'
 
 disp2_5	:
-		@$(ECHO) '\033[0;32m>> compilation du' $(NAME) '- - - - - - - - (3/4)\033[0m'
+		@$(ECHO) '\033[0;32m (3/4) >> compilation du' $(NAME) '\033[0m'
 
 disp3	:
 		@$(ECHO) '\033[0;35m        ===>> éxécution du binaire <<===\033[0m'
