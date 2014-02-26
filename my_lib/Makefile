@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Tue Feb 25 17:33:58 2014 matthieu raynaud de fitte
+## Last update Wed Feb 26 18:25:11 2014 matthieu raynaud de fitte
 ##
 
 SRCS	= my_putchar.c \
@@ -25,7 +25,8 @@ SRCS	= my_putchar.c \
 	  get_next.c \
 	  tab_somme.c \
 	  l_init.c \
-	  color_str.c
+	  color_str.c \
+	  my_strcat.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
