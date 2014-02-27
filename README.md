@@ -1,14 +1,21 @@
 Quelques conseils d'utilisation :
 
 ===Makefile===
+note :
+  Ce Makefile est à la norme d'EPITECH, il es néanmoins plus
+  grand et comporte des commandes en plus complexes qui vous
+  seront, je l'espère, utiles.
 
 les commandes spéciales de ce Makefile sont :
+
   - abs ( recompile la lib, élimine les fichiers temporaires, compile
           avec des flags )
-  - exe ( fait la même chose que abs et lance le binaire en plus )
-  - env ( lance le binaire en env -i )
-  - test1 ( vérifie les read ==> echo | ./binaire)
-  - test2 ( vérifie l'affichage ==> ./binaire | cat -e)
+
+  ==> toutes les autres commandes utilisent abs comme base <==
+  - exe ( lance le binaire )
+  - env ( vérifie l'environnement ==> env -i ./binaire)
+  - ech ( vérifie les read ==> echo | ./binaire)
+  - cat ( vérifie l'affichage ==> ./binaire | cat -e)
 
 ===copy.sh===
 
