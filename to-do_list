@@ -7,10 +7,6 @@ fonctions à développer :
   l'inverse
   le cube
 
-   - str
-  affichage texte en couleur
-  putchar && putstr ( prend 'write' directement )
-
 2)
 copy.sh doit être adapté de façon à ne pas copier my_lib dans le my_lib déjà présent
 s'il y en a déjà un.
