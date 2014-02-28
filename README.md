@@ -3,8 +3,8 @@ Quelques conseils d'utilisation :
 ===Makefile===
 
 note :
-  Ce Makefile est à la norme d'EPITECH, il es néanmoins plus
-  grand et comporte des commandes en plus complexes qui vous
+  Ce Makefile est à la norme d'EPITECH, il est néanmoins plus
+  grand et comporte des commandes plus complètes qui vous
   seront, je l'espère, utiles.
 
 les commandes spéciales de ce Makefile sont :
