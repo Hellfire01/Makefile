@@ -5,10 +5,11 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Mon Feb  3 12:30:21 2014 a
-** Last update Wed Feb 26 17:04:08 2014 matthieu raynaud de fitte
+** Last update Fri Feb 28 21:55:30 2014 matthieu raynaud de fitte
 */
 
 #include "my.h"
+#include "header.h"
 
 int	main()
 {

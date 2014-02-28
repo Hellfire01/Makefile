@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Thu Feb 27 23:53:04 2014 matthieu raynaud de fitte
+## Last update Fri Feb 28 16:14:22 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -61,7 +61,7 @@ exe     :       abs
 lib	:
 		cd my_lib && make
 
-## outils des commandes supplémentaires
+
 make_1 	:
 		clear
 		@echo -e '\033[0;32m (1/4) >> suppression des fichiers temporaires\033[0m'
