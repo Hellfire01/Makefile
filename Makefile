@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Fri Feb 28 16:14:22 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 01:17:55 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -26,12 +26,14 @@ all	:	$(NAME)
 
 $(NAME) :       $(OBJS)
 		gcc -o $(NAME) $(OBJS) libmy.a $(#MINILIB)
+		cp $(NAME) bin/$(NAME)
 
 clean   :
 		rm -f $(OBJS)
 
 fclean  :       clean
 		rm -f $(NAME)
+		cd bin && rm -f $(NAME)
 
 re      :       fclean all
 
