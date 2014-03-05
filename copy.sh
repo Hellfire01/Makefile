@@ -10,4 +10,5 @@ cp $P/my.h my.h
 cp $P/libmy.a libmy.a
 cp $P/header.h header.h
 cp $P/main.c main.c
-cp -r /$P/my_lib my_lib
+##rm -rf ./my_lib
+cp -Tr $P/my_lib my_lib

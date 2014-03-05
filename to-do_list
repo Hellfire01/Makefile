@@ -1,4 +1,3 @@
-1)
 fonctions à développer :
 
    - Maths
@@ -6,7 +5,3 @@ fonctions à développer :
   l'opposé
   l'inverse
   le cube
-
-2)
-copy.sh doit être adapté de façon à ne pas copier my_lib dans le my_lib déjà présent
-s'il y en a déjà un.

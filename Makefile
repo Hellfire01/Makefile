@@ -5,38 +5,28 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar  5 01:30:31 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 16:46:45 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
+NAME	= 	binaire
 
+SRC	= 	main.c
 
-NAME    =       binaire
+OBJ	= 	$(SRC:.c=.o)
 
-SRCS    =       main.c
-
-CFLAGS  =	-W -Wall -Wextra
-
-MINILIB	=	-L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/X11 -lXext -lX11
-
-OBJS    =       $(SRCS:.c=.o)
-
+CFLAGS	= 	-W -Wall -Wextra
 
 all	:	$(NAME)
 
-$(NAME) :       $(OBJS)
-		gcc -o $(NAME) $(OBJS) libmy.a $(#MINILIB)
-		cp $(NAME) bin/$(NAME)
+$(NAME)	:	$(OBJ)
+		cc -o $(NAME) $(OBJ)
 
-clean   :
-		rm -f $(OBJS)
+clean	:
+		rm -f $(OBJ)
 
-fclean  :       clean
+fclean	:	clean
 		rm -f $(NAME)
-		cd bin && rm -f $(NAME)
-
-re      :       fclean all
-
 
 ## commandes supplémentaires
 abs	:	make_1 make_2 make_3 $(NAME)
@@ -44,35 +34,36 @@ abs	:	make_1 make_2 make_3 $(NAME)
 		@echo -e '\033[0;32m (4/4) >> la compilation a réussie\033[0m' 
 		ls -a --color
 
-cat     :       abs
+cat	:	abs
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec cat -e <<===\033[0m'
 		./$(NAME) | cat -e
 
-ech     :       abs
+ech	:	abs
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec echo | <<===\033[0m'
 		echo | ./$(NAME)
 
-env     :       abs
+env	:	abs
 		@echo -e '\033[0;35m        ===>> éxécution du binaire sans environnement <<===\033[0m'
 		env -i ./$(NAME)
 
-exe     :       abs
+exe	:	abs
 		@echo -e '\033[0;35m        ===>> éxécution du binaire <<===\033[0m'
 		./$(NAME)
 
 lib	:
 		cd lib && make
 
-
-make_1 	:
-		clear
-		@echo -e '\033[0;32m (1/4) >> suppression des fichiers temporaires\033[0m'
+old	:
 		rm -f *~ *\#
 
-make_2	:	fclean
+make_1	:
+		clear
+		@echo -e '\033[0;32m (1/4) >> suppression des fichiers temporaires\033[0m'
+
+make_2	:	old fclean
 		@echo -e '\033[0;32m (2/4) >> compilation de la libmy.a\033[0m'
 
 make_3	:	lib
-		@echo -e '\033[0;32m (3/4) >> compilation du "'$(NAME)'"\033[0m'
+		@echo -e '\033[0;32m (3/4) >> compilation de votre "'$(NAME)'"\033[0m'
 
-.PHONY	:	all abs $(NAME) cat clean clear make_1 make_2 make_3 ech env exe fclean lib re
+.PHONY:	all abs cat clean clear ech env exe fclean lib make_1 make_2 make_3 old re
