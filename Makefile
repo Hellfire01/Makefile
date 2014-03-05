@@ -5,15 +5,15 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar  5 16:46:45 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 17:28:30 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
 NAME	= 	binaire
 
-SRC	= 	main.c
+SRCS	= 	main.c
 
-OBJ	= 	$(SRC:.c=.o)
+OBJ	= 	$(SRCS:.c=.o)
 
 CFLAGS	= 	-W -Wall -Wextra
 
