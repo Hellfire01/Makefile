@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar  5 17:28:30 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 18:11:49 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -13,40 +13,47 @@ NAME	= 	binaire
 
 SRCS	= 	main.c
 
-OBJ	= 	$(SRCS:.c=.o)
+OBJS	= 	$(SRCS:.c=.o)
 
 CFLAGS	= 	-W -Wall -Wextra
 
 all	:	$(NAME)
 
-$(NAME)	:	$(OBJ)
-		cc -o $(NAME) $(OBJ)
+$(NAME)	:	$(OBJS)
+		cc -o $(NAME) $(OBJS)
 
 clean	:
-		rm -f $(OBJ)
+		rm -f $(OBJS)
 
 fclean	:	clean
 		rm -f $(NAME)
 
 ## commandes supplémentaires
 abs	:	make_1 make_2 make_3 $(NAME)
+		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
 		$(RM) $(OBJS)
-		@echo -e '\033[0;32m (4/4) >> la compilation a réussie\033[0m' 
+		@echo -e '\033[0;32m (5/5) >> la compilation a réussie\033[0m'
+		@echo -e '' 
 		ls -a --color
+		@echo -e ''
 
 cat	:	abs
+		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec cat -e <<===\033[0m'
 		./$(NAME) | cat -e
 
 ech	:	abs
+		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec echo | <<===\033[0m'
 		echo | ./$(NAME)
 
 env	:	abs
+		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire sans environnement <<===\033[0m'
 		env -i ./$(NAME)
 
 exe	:	abs
+		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire <<===\033[0m'
 		./$(NAME)
 
@@ -54,16 +61,17 @@ lib	:
 		cd lib && make
 
 old	:
-		rm -f *~ *\#
+		rm -f *~ *\# $(OJBS)
 
 make_1	:
 		clear
-		@echo -e '\033[0;32m (1/4) >> suppression des fichiers temporaires\033[0m'
+		@echo -e '\033[0;32m (1/5) >> suppression des fichiers temporaires\033[0m'
 
 make_2	:	old fclean
-		@echo -e '\033[0;32m (2/4) >> compilation de la libmy.a\033[0m'
+		@echo -e '\033[0;32m (2/5) >> compilation de la libmy.a\033[0m'
 
 make_3	:	lib
-		@echo -e '\033[0;32m (3/4) >> compilation de votre "'$(NAME)'"\033[0m'
+		@echo -e ''
+		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
 .PHONY:	all abs cat clean clear ech env exe fclean lib make_1 make_2 make_3 old re

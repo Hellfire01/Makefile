@@ -11,6 +11,7 @@ les commandes spéciales de ce Makefile sont :
 
   - abs ( recompile la lib, élimine les fichiers temporaires, compile
           avec des flags )
+  - old ( supprime tous les fichiers temporaires )
 
   ==> toutes les autres commandes utilisent abs comme base <==
   - exe ( lance le binaire )

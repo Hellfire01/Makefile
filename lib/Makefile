@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Wed Mar  5 01:46:06 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 18:11:08 2014 matthieu raynaud de fitte
 ##
 
 SRCS	= 	my_putchar.c \
@@ -50,6 +50,7 @@ disp	:
 		@echo -e '\033[0;33m - (2/5) >> compilation des sources \033[0m'
 
 disp2	:
+		@echo -e ''
 		@echo -e '\033[0;33m - (1/5) >> suppression des fichiers temporaires \033[0m'
 
 clean	:
