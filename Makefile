@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar  5 01:17:55 2014 matthieu raynaud de fitte
+## Last update Wed Mar  5 01:30:31 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -41,7 +41,7 @@ re      :       fclean all
 ## commandes supplémentaires
 abs	:	make_1 make_2 make_3 $(NAME)
 		$(RM) $(OBJS)
-		@echo -e '\033[0;32m (4/4) >> compilation réussie\033[0m' 
+		@echo -e '\033[0;32m (4/4) >> la compilation a réussie\033[0m' 
 		ls -a --color
 
 cat     :       abs
@@ -61,7 +61,7 @@ exe     :       abs
 		./$(NAME)
 
 lib	:
-		cd my_lib && make
+		cd lib && make
 
 
 make_1 	:
