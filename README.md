@@ -29,7 +29,7 @@ garantit ! ).
 
 
 
-Merci de laisser un commentaire pour pouvoir amméliorer le tout !
+Merci de laisser un commentaire pour pouvoir améliorer le tout !
 
 
 made by raynau_a, EPITECH, promo 2018
