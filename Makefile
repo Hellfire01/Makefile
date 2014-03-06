@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar  5 18:11:49 2014 matthieu raynaud de fitte
+## Last update Thu Mar  6 22:53:18 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -31,7 +31,7 @@ fclean	:	clean
 ## commandes supplémentaires
 abs	:	make_1 make_2 make_3 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
-		$(RM) $(OBJS)
+		rm -f $(OBJS)
 		@echo -e '\033[0;32m (5/5) >> la compilation a réussie\033[0m'
 		@echo -e '' 
 		ls -a --color
