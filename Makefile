@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Thu Mar  6 22:53:18 2014 matthieu raynaud de fitte
+## Last update Fri Mar  7 20:57:43 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -15,7 +15,7 @@ SRCS	= 	main.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
-CFLAGS	= 	-W -Wall -Wextra
+CFLAGS	= 	-W -Wall -Wextra -g3
 
 all	:	$(NAME)
 
@@ -38,30 +38,36 @@ abs	:	make_1 make_2 make_3 $(NAME)
 		@echo -e ''
 
 cat	:	abs
-		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec cat -e <<===\033[0m'
 		./$(NAME) | cat -e
 
 ech	:	abs
-		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire avec echo | <<===\033[0m'
 		echo | ./$(NAME)
 
 env	:	abs
-		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire sans environnement <<===\033[0m'
 		env -i ./$(NAME)
 
 exe	:	abs
-		@echo -e ''
 		@echo -e '\033[0;35m        ===>> éxécution du binaire <<===\033[0m'
 		./$(NAME)
+
+val	:	abs
+		@echo -e '\033[0;35m        ===>> utilisation de valgrind pour tester le programme <<===\033[0m'
+		valgrind -v -q ./$(NAME)
+
+## autres commandes qui peuvent se révéler utiles
+v	:
+		valgrind -v -q ./$(NAME)
 
 lib	:
 		cd lib && make
 
 old	:
 		rm -f *~ *\# $(OJBS)
+
+
 
 make_1	:
 		clear
