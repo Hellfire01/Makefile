@@ -5,8 +5,10 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Wed Mar  5 18:11:08 2014 matthieu raynaud de fitte
+## Last update Sat Mar  8 17:01:52 2014 matthieu raynaud de fitte
 ##
+
+CFLAGS  =       -W -Wall -Wextra -g3
 
 SRCS	= 	my_putchar.c \
 	  	my_isin.c \
@@ -41,8 +43,7 @@ all	:	disp2 fclean disp $(NAME)
 		cp libmy.a ../libmy.a
 		cp my.h ../my.h
 
-$(NAME)	:
-		cc -W -Wall -Wextra -c $(SRCS)
+$(NAME)	:	$(OBJS)
 		@echo -e '\033[0;33m - (3/5) >> compilation de la libmy.a \033[0m'
 		ar rc libmy.a $(OBJS)
 
