@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Fri Mar  7 21:29:30 2014 matthieu raynaud de fitte
+## Last update Sat Mar  8 02:39:13 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -55,11 +55,11 @@ exe	:	abs
 
 val	:	abs
 		@echo -e '\033[0;35m        ===>> utilisation de valgrind pour tester le programme <<===\033[0m'
-		valgrind -v -q ./$(NAME)
+		valgrind -v -q --track-origins=yes ./$(NAME)
 
 ## autres commandes qui peuvent se révéler utiles
 v	:
-		valgrind -v -q ./$(NAME)
+		valgrind -v -q --track-origins=yes ./$(NAME)
 
 lib	:
 		cd lib && make
