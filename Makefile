@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Mar  8 02:39:13 2014 matthieu raynaud de fitte
+## Last update Sat Mar  8 18:12:03 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -27,6 +27,8 @@ clean	:
 
 fclean	:	clean
 		rm -f $(NAME)
+
+re	:	fclean all
 
 ## commandes supplémentaires
 abs	:	make_1 make_2 make_3 $(NAME)
