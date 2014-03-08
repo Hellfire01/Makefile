@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:32:59 2014 a
-** Last update Mon Feb 10 16:16:36 2014 a
+** Last update Sat Mar  8 18:49:51 2014 matthieu raynaud de fitte
 */
 
 #include <stdlib.h>
@@ -25,5 +25,6 @@ int     my_free_doublechar(char **str)
       free(str[i]);
       i++;
     }
+  free(str);
   return (0);
 }
