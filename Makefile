@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Mar  8 18:12:03 2014 matthieu raynaud de fitte
+## Last update Sun Mar  9 17:47:25 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -82,4 +82,4 @@ make_3	:	lib
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY:	all abs cat clean clear ech env exe fclean lib make_1 make_2 make_3 old re
+.PHONY:	all abs cat clean clear ech env exe fclean lib make_1 make_2 make_3 old re v val
