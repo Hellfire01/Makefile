@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Tue Mar 11 16:51:16 2014 matthieu raynaud de fitte
+## Last update Tue Mar 11 19:51:40 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 ## note sur les flags utilisés :
@@ -30,7 +30,7 @@ OBJS	= 	$(SRCS:.c=.o)
 CFLAGS	= 	-Wall -Wextra -g3
 
 
-all	:	lib_bis $(NAME)
+all	:	lib $(NAME)
 
 $(NAME)	:	$(OBJS)
 		cc -o $(NAME) $(OBJS) libmy.a
@@ -43,7 +43,7 @@ fclean	:	clean
 
 re	:	fclean all
 
-lib_bis	:
+lib	:
 		cd lib && make all
 
 
@@ -79,7 +79,7 @@ val	:	abs
 v	:
 		valgrind -v -q --track-origins=yes ./$(NAME)
 
-lib	:
+lib_bis	:
 		cd lib && make abs
 
 old	:
@@ -94,7 +94,7 @@ make_1	:
 make_2	:	old fclean
 		@echo -e '\033[0;32m (2/5) >> compilation de la libmy.a\033[0m'
 
-make_3	:	lib
+make_3	:	lib_bis
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
