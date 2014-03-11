@@ -5,9 +5,21 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sun Mar  9 17:47:25 2014 matthieu raynaud de fitte
+## Last update Tue Mar 11 16:51:16 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
+## note sur les flags utilisés :
+##
+## -Wall ==> demande au compilateur d'afficher tous les warnings, cela inclus
+##    ceux qui ne sont normallement pas affichés comme les variables non
+##    utilisées
+##
+## -Wextra ==> affiche aussi les messages d'erreur liés à des comparaisons de
+##    pointeurs sur 0
+##
+## -g3 ==> ajoute des informations de débuggage à la compilation ( utilisées
+##    par valgrind, ... )
+
 
 NAME	= 	binaire
 
@@ -15,9 +27,10 @@ SRCS	= 	main.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
-CFLAGS	= 	-W -Wall -Wextra -g3
+CFLAGS	= 	-Wall -Wextra -g3
 
-all	:	$(NAME)
+
+all	:	lib_bis $(NAME)
 
 $(NAME)	:	$(OBJS)
 		cc -o $(NAME) $(OBJS) libmy.a
@@ -30,7 +43,11 @@ fclean	:	clean
 
 re	:	fclean all
 
-## commandes supplémentaires
+lib_bis	:
+		cd lib && make all
+
+
+
 abs	:	make_1 make_2 make_3 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
 		rm -f $(OBJS)
@@ -59,12 +76,11 @@ val	:	abs
 		@echo -e '\033[0;35m        ===>> utilisation de valgrind pour tester le programme <<===\033[0m'
 		valgrind -v -q --track-origins=yes ./$(NAME)
 
-## autres commandes qui peuvent se révéler utiles
 v	:
 		valgrind -v -q --track-origins=yes ./$(NAME)
 
 lib	:
-		cd lib && make
+		cd lib && make abs
 
 old	:
 		rm -f *~ *\# $(OJBS)
@@ -82,4 +98,4 @@ make_3	:	lib
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY:	all abs cat clean clear ech env exe fclean lib make_1 make_2 make_3 old re v val
+.PHONY	:	all abs cat clean clear ech env exe fclean lib lib_bis make_1 make_2 make_3 old re v val

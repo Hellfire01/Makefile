@@ -5,10 +5,10 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Sat Mar  8 17:01:52 2014 matthieu raynaud de fitte
+## Last update Tue Mar 11 16:39:56 2014 matthieu raynaud de fitte
 ##
 
-CFLAGS  =       -W -Wall -Wextra -g3
+CFLAGS  =       -Wall -Wextra -g3
 
 SRCS	= 	my_putchar.c \
 	  	my_isin.c \
@@ -36,7 +36,13 @@ OBJS	= 	$(SRCS:.c=.o)
 NAME	= 	libmy.a
 
 
-all	:	disp2 fclean disp $(NAME)
+all	:	$(NAME)
+		cp libmy.a ../libmy.a
+		cp my.h ../my.h
+
+abs	:	disp2 fclean disp $(OBJS)
+		@echo -e '\033[0;33m - (3/5) >> compilation de la libmy.a \033[0m'
+		ar rc libmy.a $(OBJS)
 		@echo -e '\033[0;33m - (4/5) >> suppression de tous les fichiers temporaires \033[0m'
 		$(RM) *~ *\# $(OBJS)
 		@echo -e '\033[0;33m - (5/5) >> copie de la libmy.a et du my.h \033[0m'
@@ -44,7 +50,6 @@ all	:	disp2 fclean disp $(NAME)
 		cp my.h ../my.h
 
 $(NAME)	:	$(OBJS)
-		@echo -e '\033[0;33m - (3/5) >> compilation de la libmy.a \033[0m'
 		ar rc libmy.a $(OBJS)
 
 disp	:
@@ -60,12 +65,10 @@ clean	:
 fclean	:	clean
 		rm -f $(NAME)
 
-spe	:	all
-		rm *.o
 
 re	:	fclean all
 
 tot	:
 		rm -f *~ *\#
 
-.PHONY	: all disp disp2 clean fclean spe re tot
+.PHONY	: all disp disp2 clean fclean re tot
