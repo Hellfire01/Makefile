@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Tue Mar 11 19:51:40 2014 matthieu raynaud de fitte
+## Last update Wed Mar 12 16:45:30 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 ## note sur les flags utilisés :
@@ -28,6 +28,9 @@ SRCS	= 	main.c
 OBJS	= 	$(SRCS:.c=.o)
 
 CFLAGS	= 	-Wall -Wextra -g3
+
+#LIBX    =       -L/usr/lib64 -lmlx_$(#HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
+## mettre toute la ligne en clair en cas d'usage de la minilbX et mettre $(#LIBX) devant " libmy.a"
 
 
 all	:	lib $(NAME)
