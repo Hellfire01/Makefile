@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Wed Mar 12 16:45:30 2014 matthieu raynaud de fitte
+## Last update Thu Mar 13 13:41:34 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 ## note sur les flags utilisés :
@@ -29,14 +29,13 @@ OBJS	= 	$(SRCS:.c=.o)
 
 CFLAGS	= 	-Wall -Wextra -g3
 
-#LIBX    =       -L/usr/lib64 -lmlx_$(#HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
-## mettre toute la ligne en clair en cas d'usage de la minilbX et mettre $(#LIBX) devant " libmy.a"
+LIBX    =       -L/usr/lib64 -lmlx_$(#HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
 
 
 all	:	lib $(NAME)
 
 $(NAME)	:	$(OBJS)
-		cc -o $(NAME) $(OBJS) libmy.a
+		cc -o $(NAME) $(OBJS) libmy.a $(#LIBX)
 
 clean	:
 		rm -f $(OBJS)
@@ -50,6 +49,8 @@ lib	:
 		cd lib && make all
 
 
+
+## commandes supplémentaires
 
 abs	:	make_1 make_2 make_3 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
