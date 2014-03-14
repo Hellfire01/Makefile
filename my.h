@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Wed Mar  5 01:42:22 2014 matthieu raynaud de fitte
+** Last update Fri Mar 14 14:06:24 2014 matthieu raynaud de fitte
 */
 
 #ifndef MY_H_
@@ -41,7 +41,7 @@ int     verif(char *str);
 /* color_str.c */
 int     c_str(char *str, char color);
 void    my_color(char c);
-
+int	strp(char *str);
 
 /* fonctions maths */
 
