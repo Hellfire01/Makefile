@@ -22,15 +22,21 @@ les commandes spéciales de ce Makefile sont :
 
 ===copy.sh===
 
-mettre le chemin sur le script dans le script puis mettre un alias dans
+Mettre le chemin sur le script dans le script puis mettre un alias dans
 le .bashrc, cela pemet d'avoir une base ( lib, Makefile, ... ) pour
 chaque nouveau projet avec une simple commande shell ( gain de temps
 garantit !!! ).
 
 
+===binaires multiples===
+
+En cas d'une multitude de binaires, utiliser le contenu du second dossier
+qui contient un environnement de travail adapté à ce cas
+copyb.sh se charge de copier la bonne lib ainsi que le reste, vous n'avez donc
+rien à faire à la main
 
 
-Merci de laisser un commentaire pour pouvoir améliorer le tout !
+merci de laisser un commentaire pour pouvoir améliorer le tout !
 
 
 made by raynau_a, EPITECH, promo 2018
