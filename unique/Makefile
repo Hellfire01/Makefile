@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Fri Mar 14 13:40:07 2014 matthieu raynaud de fitte
+## Last update Mon Mar 17 19:18:42 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -75,9 +75,6 @@ v	:
 lib_bis	:
 		cd lib && make abs
 
-old	:
-		rm -f *~ *\# $(OJBS)
-
 
 
 make_1	:
@@ -91,4 +88,4 @@ make_3	:	lib_bis
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY	:	all abs cat clean clear ech env exe fclean lib lib_bis make_1 make_2 make_3 old re v val
+.PHONY	:	all abs cat clean clear ech env exe fclean lib lib_bis make_1 make_2 make_3 re v val
