@@ -32,6 +32,7 @@ garantit !!! ).
 
 En cas d'une multitude de binaires, utiliser le contenu du second dossier
 qui contient un environnement de travail adapté à ce cas
+
 copyb.sh se charge de copier la bonne lib ainsi que le reste, vous n'avez donc
 rien à faire à la main
 
