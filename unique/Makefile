@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Mon Mar 17 19:18:42 2014 matthieu raynaud de fitte
+## Last update Mon Mar 17 19:21:58 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -81,7 +81,7 @@ make_1	:
 		clear
 		@echo -e '\033[0;32m (1/5) >> suppression des fichiers temporaires\033[0m'
 
-make_2	:	old fclean
+make_2	:	fclean
 		@echo -e '\033[0;32m (2/5) >> compilation de la libmy.a\033[0m'
 
 make_3	:	lib_bis
