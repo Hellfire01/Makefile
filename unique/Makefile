@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sun Mar 23 14:48:17 2014 matthieu raynaud de fitte
+## Last update Sun Mar 23 14:54:59 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -21,7 +21,7 @@ CFLAGS	= 	-Wall -Wextra -g3
 LIBX    =       -L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
 
 
-all	:	lib $(NAME)
+all	:	$(NAME)
 
 $(NAME)	:	$(OBJS)
 		cc -o $(NAME) $(OBJS) libmy.a $(#LIBX)
