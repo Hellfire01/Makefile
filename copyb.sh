@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Mar 17 18:08:35 2014 matthieu raynaud de fitte
-## Last update Mon Mar 17 18:22:01 2014 matthieu raynaud de fitte
+## Last update Sun Mar 23 20:02:42 2014 matthieu raynaud de fitte
 ##
 
 P=/home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/unique
@@ -23,3 +23,4 @@ cp $P/header.h header.h
 cp -Tr $P/lib lib
 cp -Tr $B/bin_1 bin_1
 cp -Tr $B/bin_2 bin_2
+mkdir bin
