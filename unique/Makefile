@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Mon Mar 17 19:21:58 2014 matthieu raynaud de fitte
+## Last update Sun Mar 23 14:48:17 2014 matthieu raynaud de fitte
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -41,7 +41,7 @@ lib	:
 
 ## commandes supplémentaires ( debug et autres )
 
-abs	:	make_1 make_2 make_3 $(NAME)
+abs	:	abs_0 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
 		rm -f $(OBJS)
 		@echo -e '\033[0;32m (5/5) >> la compilation a réussie\033[0m'
@@ -77,15 +77,14 @@ lib_bis	:
 
 
 
-make_1	:
+abs_0	:
 		clear
 		@echo -e '\033[0;32m (1/5) >> suppression des fichiers temporaires\033[0m'
-
-make_2	:	fclean
+		rm -f $(OBJS)
+		rm -f $(NAME)
 		@echo -e '\033[0;32m (2/5) >> compilation de la libmy.a\033[0m'
-
-make_3	:	lib_bis
+		cd lib && make abs
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY	:	all abs cat clean clear ech env exe fclean lib lib_bis make_1 make_2 make_3 re v val
+.PHONY	:	all abs abs_0 cat clean clear ech env exe fclean lib lib_bis re v val

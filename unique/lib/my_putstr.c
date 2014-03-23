@@ -5,16 +5,13 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:36:38 2013 a
-** Last update Mon Feb 10 16:24:23 2014 a
+** Last update Sun Mar 23 14:44:31 2014 matthieu raynaud de fitte
 */
 
+#include <unistd.h>
 #include "my.h"
 
-void	my_putstr(char *src)
+void	my_putstr(char *str)
 {
-  int	counter;
-
-  counter = 0;
-  while (src[counter] != '\0')
-    my_putchar(src[counter++]);
+  write(1, str, my_strlen(str));
 }
