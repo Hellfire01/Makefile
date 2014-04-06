@@ -5,13 +5,14 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Fri Mar 14 14:06:24 2014 matthieu raynaud de fitte
+** Last update Sun Apr  6 19:19:29 2014 matthieu raynaud de fitte
 */
 
 #ifndef MY_H_
 # define MY_H_
 
 void	my_put_doublechar(char **str);
+void	my_put_doublechar2(char **str);
 int     my_free_doublechar(char **str);
 void    my_tab_put(int *tab, int size);
 char    *my_strdup(char *str);
@@ -27,7 +28,6 @@ void    l_init(char *l, int taille);
 /* my_isin.c */
 int     my_isin(char c, char *str);
 int     my_isin2(char *str, char c);
-int     my_isin3(char *str, int posision, char caracter);
 /* my_getnbr_base.c */
 int     neg(char *str, char *base, int basemax);
 int     number(char c, char *base);
