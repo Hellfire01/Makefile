@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:29:50 2014 a
-** Last update Sun Apr  6 19:20:14 2014 matthieu raynaud de fitte
+** Last update Fri Apr 25 19:37:05 2014 mat
 */
 
 #include <stdlib.h>
@@ -40,9 +40,9 @@ void	my_put_doublechar2(char **str)
   a = 0;
   while (str[a] != NULL)
     {
-      my_putchar('\"');
+      c_str("\"", 'y');
       my_putstr(str[a]);
-      my_putchar('\"');
+      c_str("\"", 'y');
       if (str[a][0] == '\0')
 	c_str(" ==> ligne vide", 'y');
       my_putchar('\n');

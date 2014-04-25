@@ -5,11 +5,11 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Mar 17 18:08:35 2014 matthieu raynaud de fitte
-## Last update Sun Mar 23 20:02:42 2014 matthieu raynaud de fitte
+## Last update Wed Apr 23 21:46:54 2014 mat
 ##
 
-P=/home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/unique
-B=/home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/multiples
+P=/home/mat/epitech/Makefile/unique
+B=/home/mat/epitech/Makefile/multiples
 
 ## remplacer le contenu de $P par le chemin sur le script
 ## ( à l'endroit ou vous avez mit le script )

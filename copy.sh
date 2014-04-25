@@ -5,10 +5,10 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Mar 17 18:08:45 2014 matthieu raynaud de fitte
-## Last update Mon Mar 17 18:11:28 2014 matthieu raynaud de fitte
+## Last update Wed Apr 23 21:47:44 2014 mat
 ##
 
-P=/home/raynau_a/rendu/GETNEXT-MAKEFILE-LIB/unique
+P=/home/mat/epitech/Makefile/unique
 
 ## remplacer le contenu de $P par le chemin sur le script
 ## ( à l'endroit ou vous avez mit le script )
