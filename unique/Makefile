@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sun Mar 23 23:09:51 2014 matthieu raynaud de fitte
+## Last update Tue Apr 29 23:27:32 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -22,6 +22,7 @@ LIBX    =       -L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
 
 
 all	:	lib $(NAME)
+		cp $(NAME) bin/$(NAME)
 
 $(NAME)	:	$(OBJS)
 		cc -o $(NAME) $(OBJS) libmy.a $(#LIBX)
@@ -31,6 +32,7 @@ clean	:
 
 fclean	:	clean
 		rm -f $(NAME)
+		rm -f bin/$(NAME)
 
 re	:	fclean all
 
@@ -46,6 +48,7 @@ abs	:	abs_0 $(NAME)
 		rm -f $(OBJS)
 		@echo -e '\033[0;32m (5/5) >> la compilation a réussie\033[0m'
 		@echo -e '' 
+		cp $(NAME) bin/$(NAME)
 		ls -a --color
 		@echo -e ''
 
