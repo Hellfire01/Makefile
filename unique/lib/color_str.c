@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Sat Feb 22 18:49:16 2014 matthieu raynaud de fitte
-** Last update Fri Mar 14 14:16:07 2014 matthieu raynaud de fitte
+** Last update Sun May 11 17:52:27 2014 mat
 */
 
 #include "my.h"
@@ -15,12 +15,11 @@
 ** en cas d'erreur, aucune couleur n'est mise
 */
 
-int	c_str(char *str, char color)
+void	c_str(char *str, char color)
 {
   my_color(color);
   my_putstr(str);
   my_putstr("\033[0;0m");
-  return (0);
 }
 
 /*
@@ -58,23 +57,28 @@ void	my_color(char c)
 ** Cette fonction est une vertion plus optimisée de my_putstr() et de c_str()
 */
 
-int     strp(char *str)
+void	strp(char *str)
 {
   int   i;
-  int	ret;
 
+  i = 0;
   while (str[i] != '\0')
     {
-      if ((ret = my_strlen(str)) > 2)
-	if (str[i] == '%' && my_isin(str[i + 1], "rgybpcew") == 1)
-	  {
-	    my_color(str[i + 1]);
-	    ret = ret - 2;
-	    i = i + 2;
-	  }
-      my_putchar(str[i]);
-      i = i + 1;
+      if (str[i] == '%')
+        {
+          i = i + 1;
+          if (my_isin(str[i], "rgybpcew") == 1)
+            {
+              my_color(str[i]);
+              i = i + 1;
+            }
+          else
+            i = i - 1;
+        }
+      else
+        {
+          my_putchar(str[i]);
+          i = i + 1;
+        }
     }
-  my_putstr("\033[0;0m");
-  return (ret);
 }
