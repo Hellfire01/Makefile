@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Tue Apr 29 23:27:32 2014 mat
+## Last update Sun May 18 03:30:21 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -40,9 +40,6 @@ lib	:
 		cd lib && make all
 
 
-
-## commandes supplémentaires ( debug et autres )
-
 abs	:	abs_0 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'
 		rm -f $(OBJS)
@@ -51,34 +48,6 @@ abs	:	abs_0 $(NAME)
 		cp $(NAME) bin/$(NAME)
 		ls -a --color
 		@echo -e ''
-
-cat	:	abs
-		@echo -e '\033[0;35m        ===>> éxécution du binaire avec cat -e <<===\033[0m'
-		./$(NAME) | cat -e
-
-ech	:	abs
-		@echo -e '\033[0;35m        ===>> éxécution du binaire avec echo | <<===\033[0m'
-		echo | ./$(NAME)
-
-env	:	abs
-		@echo -e '\033[0;35m        ===>> éxécution du binaire sans environnement <<===\033[0m'
-		env -i ./$(NAME)
-
-exe	:	abs
-		@echo -e '\033[0;35m        ===>> éxécution du binaire <<===\033[0m'
-		./$(NAME)
-
-val	:	abs
-		@echo -e '\033[0;35m        ===>> utilisation de valgrind pour tester le programme <<===\033[0m'
-		valgrind -v -q --track-origins=yes ./$(NAME)
-
-v	:
-		valgrind -v -q --track-origins=yes ./$(NAME)
-
-lib_bis	:
-		cd lib && make abs
-
-
 
 abs_0	:
 		clear
@@ -90,4 +59,4 @@ abs_0	:
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY	:	all abs abs_0 cat clean clear ech env exe fclean lib lib_bis re v val
+.PHONY	:	all abs abs_0 clean clear fclean lib re
