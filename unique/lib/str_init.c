@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Sat Feb 22 18:10:15 2014 matthieu raynaud de fitte
-** Last update Sat Feb 22 18:11:53 2014 matthieu raynaud de fitte
+** Last update Wed Jul 30 16:25:48 2014 mat
 */
 
 /*
@@ -14,7 +14,7 @@
 ** attention à ne pas lui envoyer un taille trop grande pour éviter le Segfault
 */
 
-void    l_init(char *l, int taille)
+void    str_init(char *l, int taille)
 {
   int   i;
 

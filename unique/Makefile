@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sun May 18 03:30:21 2014 mat
+## Last update Sat Aug  9 01:05:19 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -28,9 +28,11 @@ $(NAME)	:	$(OBJS)
 		cc -o $(NAME) $(OBJS) libmy.a $(#LIBX)
 
 clean	:
+		cd lib && make clean
 		rm -f $(OBJS)
 
 fclean	:	clean
+		cd lib && make fclean
 		rm -f $(NAME)
 		rm -f bin/$(NAME)
 
@@ -39,6 +41,14 @@ re	:	fclean all
 lib	:
 		cd lib && make all
 
+
+exe	:	abs
+		@echo -e '\033[0;32m execution de :\n=== \033[0;36m'$(NAME)'\033[0;32m === \033[0m'
+		./$(NAME)
+
+val	:	abs
+		@echo -e '\033[0;32m execution de :\n=== \033[0;36m'$(NAME)'\033[0;32m === \033[0m'
+		valgrind -v -q ./$(NAME)
 
 abs	:	abs_0 $(NAME)
 		@echo -e '\033[0;32m (4/5) >> suppression des objets \033[0m'

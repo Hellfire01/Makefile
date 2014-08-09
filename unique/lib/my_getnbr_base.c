@@ -5,10 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Oct  9 15:39:20 2013 a
-** Last update Thu Feb 20 18:49:17 2014 matthieu raynaud de fitte
+** Last update Mon Aug  4 16:49:33 2014 mat
 */
 
-#include	"my.h"
+#include "my.h"
 
 int	neg(char *str, char *base, int basemax)
 {
@@ -48,7 +48,7 @@ int	number(char c, char *base)
 
 int	verif2(char *str, char *base)
 {
-  int   i;
+  int	i;
 
   i = 0;
   while (str[i] != '\0')
@@ -62,7 +62,7 @@ int	verif2(char *str, char *base)
 
 /*
 ** Si aucun nombre n'est trouvé, my_getnbr_base() renvoie 0
-** WARNING ! ==> l'overflow n'est pas géré
+** WARNING ! ==> l'overflow n'est pas géré, il donne des nombres étranges
 */
 
 int	my_getnbr_base(char *str, char *base)

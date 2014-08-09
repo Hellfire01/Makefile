@@ -5,26 +5,26 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Fri Jan 24 02:32:59 2014 a
-** Last update Sat Mar  8 18:49:51 2014 matthieu raynaud de fitte
+** Last update Mon Aug  4 16:47:26 2014 mat
 */
 
 #include <stdlib.h>
 #include "my.h"
 
 /*
-** la fonction my_free_doublechar libère tout le contenu d'un tableau de char.
+** la fonction my_free_tab libère tout le contenu d'un tableau de
+**    string puis le tableau lui même.
 */
 
-int     my_free_doublechar(char **str)
+void     my_free_tab(char **tab)
 {
   int   i;
 
   i = 0;
-  while (str[i] != NULL)
+  while (tab[i] != NULL)
     {
-      free(str[i]);
+      free(tab[i]);
       i++;
     }
-  free(str);
-  return (0);
+  free(tab);
 }

@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 15:47:38 2014 a
-** Last update Sun May 11 17:54:35 2014 mat
+** Last update Sat Aug  9 01:19:15 2014 mat
 */
 
 #ifndef MY_H_
@@ -14,9 +14,7 @@
 /*
 ** fonctions de base de la lib
 */
-void	my_put_doublechar(char **str);
-void	my_put_doublechar2(char **str);
-int	my_free_doublechar(char **str);
+void	my_free_tab(char **str);
 void	my_tab_put(int *tab, int size);
 char	*my_strdup(char *str);
 void	my_putchar(char c);
@@ -27,17 +25,23 @@ int	my_strlen(char *str);
 int	my_strcmp(char *s1, char *s2);
 char	*my_strcat(char *stra, char *strb);
 int	my_put_nbr_base(int nbr, char *base);
-void	l_init(char *l, int taille);
+void	str_init(char *l, int taille);
+
+/*
+** my_put_tab.c
+*/
+void	my_put_tab(char **tab);
+void	my_put_tab2(char **tab);
 
 /*
 ** my_isin.c
 */
 int	my_isin(char c, char *str);
-int	my_isin2(char *str, char c);
-int	my_isin3(char *str, int posision, char caracter);
+int	my_isin2(char c, char *str);
+int	my_isin3(char caracter, char *str, int posision);
 
 /*
-**my_getnbr_base.c
+** my_getnbr_base.c
 **/
 int	neg(char *str, char *base, int basemax);
 int	number(char c, char *base);
@@ -56,7 +60,6 @@ int	verif(char *str);
 ** color_str.c
 */
 void	c_str(char *str, char color);
-void	my_color(char c);
 void	strp(char *str);
 
 /*
@@ -68,20 +71,21 @@ int	no_useless_spaces(char **str);
 void	eliminate_first_space(char **str);
 void	eliminate_last_space(char **str);
 
-
-/*
-**fonctions maths
-*/
-int	car(int a);
-int	expose(int nbr, int exposant);
-int	expose2(int nbr, int exposant);
-int	tab_produit(int *tab, int lignes);
-
-
 /*
 ** fonctions get_next_line
 */
-char	*my_realloc(char *old, int size);
-char	*get_next_line(const int fd);
+
+/*
+** errors.c
+*/
+void	tab_errors(int err);
+int	errors(int err);
+char	*c_errors(int err);
+
+/*
+** my_scan.c
+*/
+char	*my_scan(char *message, int size);
+int	my_nscan(char *message, int size);
 
 #endif /* !MY_H_ */

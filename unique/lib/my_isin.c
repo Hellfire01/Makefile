@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Thu Nov 14 14:57:49 2013 a
-** Last update Mon Feb 10 16:17:05 2014 a
+** Last update Sat Aug  9 01:18:41 2014 mat
 */
 
 #include "my.h"
@@ -31,7 +31,7 @@ int	my_isin(char c, char *str)
 */
 
 
-int     my_isin2(char *str, char c)
+int     my_isin2(char c, char *str)
 {
   int   i;
 
@@ -50,7 +50,7 @@ int     my_isin2(char *str, char c)
 **    et -1 en cas d'erreur.
 */
 
-int     my_isin3(char *str, int posision, char caracter)
+int     my_isin3(char caracter, char *str, int posision)
 {
   int   i;
   int   temp;

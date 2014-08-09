@@ -5,30 +5,29 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Sun Mar 23 15:02:05 2014 matthieu raynaud de fitte
+## Last update Mon Aug  4 17:08:52 2014 mat
 ##
 
 CFLAGS  =       -Wall -Wextra -g3
 
-SRCS	= 	my_putchar.c \
-	  	my_isin.c \
-	  	my_putnbr.c \
-	  	my_put_nbr_base.c \
-	  	my_swap.c \
-	  	my_putstr.c \
-	  	my_strlen.c \
-	  	my_getnbr.c \
-	  	my_getnbr_base.c \
-	  	my_strcmp.c \
-	  	my_put_doublechar.c \
-		my_putnbr_tab.c \
-	  	my_strdup.c \
-	  	my_free_doublechar.c \
-	  	expose.c \
-	  	get_next.c \
-	  	tab_somme.c \
-	  	l_init.c \
-	  	color_str.c \
+SRCS	= 	my_putchar.c		\
+	  	my_isin.c		\
+	  	my_putnbr.c		\
+	  	my_put_nbr_base.c	\
+	  	my_swap.c		\
+	  	my_putstr.c		\
+	  	my_strlen.c		\
+	  	my_getnbr.c		\
+	  	my_getnbr_base.c	\
+	  	my_strcmp.c		\
+	  	my_put_tab.c		\
+		my_putnbr_tab.c		\
+	  	my_strdup.c		\
+	  	my_free_tab.c		\
+	  	str_init.c		\
+	  	color_str.c		\
+		my_scan.c		\
+		errors.c		\
 	  	my_strcat.c
 
 OBJS	= 	$(SRCS:.c=.o)
