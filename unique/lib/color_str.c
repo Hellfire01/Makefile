@@ -5,7 +5,7 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Sat Feb 22 18:49:16 2014 matthieu raynaud de fitte
-** Last update Sat Aug  9 01:20:13 2014 mat
+** Last update Sat Aug  9 01:45:56 2014 mat
 */
 
 #include "my.h"
@@ -73,10 +73,7 @@ void	strp(char *str)
             i -= 1;
         }
       else
-        {
-          my_putchar(str[i]);
-          i += 1;
-        }
+	my_putchar(str[i++]);
     }
   my_color(7);
 }

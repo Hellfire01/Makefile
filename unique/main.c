@@ -5,27 +5,21 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Mon Feb  3 12:30:21 2014 a
-** Last update Sat Aug  9 01:14:29 2014 mat
+** Last update Sat Aug  9 01:45:31 2014 mat
 */
 
-#include <stdlib.h>
-
-#include "my.h"
 #include "header.h"
 
 int	main()
 {
-  strp("%yj'écris que en jaune%r puis en rouge %c et enfin en cyan !\n");
-  // explorer la piste des couleurs utilisés dans le bashrc ( PS1 )
+  int	tmp;;
 
-
-  /* char	*tmp; */
-
-  /* while (42) */
-  /*   { */
-  /*     tmp = my_scan("write your message\n", 500); */
-  /*     c_str(tmp, 'y'); */
-  /*     free(tmp); */
-  /*   } */
+  while (42)
+    {
+      tmp = my_nscan("write your message\n", 500);
+      c_str("nb = ", 'y');
+      my_putnbr(tmp);
+      my_putchar('\n');
+    }
   return (0);
 }

@@ -5,7 +5,7 @@
 ** Login   <mat@epitech.net>
 ** 
 ** Started on  Mon Aug  4 16:52:58 2014 mat
-** Last update Fri Aug  8 19:16:34 2014 mat
+** Last update Sat Aug  9 16:44:10 2014 mat
 */
 
 #include <stdlib.h>
@@ -30,15 +30,18 @@ int	my_nscan(char *message, int size)
     {
       again = 1;
       tmp = my_scan(message, size);
-      i = -1;
-      while (tmp[i++] != '\0')
-	if (tmp[i] < 48 || tmp[i] > 57)
-	  {
-	    again = 0;
-	    free(tmp);
-	    break ;
-	  }
-    }     
+      i = 0;
+      while (tmp[i] != '\0' && tmp[i] != '\n')
+	{
+	  if (tmp[i] < 48 || tmp[i] > 57)
+	    {
+	      again = 0;
+	      free(tmp);
+	      break ;
+	    }
+	  i += 1;
+	}
+    }
   out = my_getnbr(tmp);
   free(tmp);
   return (out);

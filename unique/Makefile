@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Aug  9 01:05:19 2014 mat
+## Last update Sat Aug  9 16:50:58 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -41,6 +41,19 @@ re	:	fclean all
 lib	:
 		cd lib && make all
 
+## à partir d'ici ce ne sont que des commandes aditionnelles
+
+go	:
+		clear
+		./$(NAME)
+
+gov	:
+		clear
+		valgrind -v -q ./$(NAME)
+
+govplus	:
+		clear
+		valgrind -v -q --leak-check=full ./$(NAME)
 
 exe	:	abs
 		@echo -e '\033[0;32m execution de :\n=== \033[0;36m'$(NAME)'\033[0;32m === \033[0m'
@@ -69,4 +82,4 @@ abs_0	:
 		@echo -e ''
 		@echo -e '\033[0;32m (3/5) >> compilation de \033[0;35m"'$(NAME)'"\033[0m'
 
-.PHONY	:	all abs abs_0 clean clear fclean lib re
+.PHONY	:	all abs abs_0 clean clear exe fclean go gov govplus lib re val
