@@ -5,10 +5,12 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 16:23:34 2013 a
-## Last update Mon Aug  4 17:08:52 2014 mat
+## Last update Mon Aug 11 21:32:16 2014 mat
 ##
 
-CFLAGS  =       -Wall -Wextra -g3
+CFLAGS	+=	-Wall -Wextra -g3
+CFLAGS	+=	-I ../includes
+
 
 SRCS	= 	my_putchar.c		\
 	  	my_isin.c		\
@@ -36,8 +38,8 @@ NAME	= 	libmy.a
 
 
 all	:	$(NAME)
-		cp libmy.a ../libmy.a
-		cp my.h ../my.h
+		cp libmy.a ../sources/libmy.a
+		cp my.h ../includes/my.h
 
 abs	:	abs_0 $(OBJS)
 		@echo -e '\033[0;33m - (3/5) >> compilation de la libmy.a \033[0m'

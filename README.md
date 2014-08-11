@@ -1,5 +1,9 @@
 Quelques conseils d'utilisation :
 
+le dossier unique est destiné à un unique binaire
+le dossier multiples contient tout le nésséssaire pour une multitude
+de binaires ( un par sous dossier que vous pouvez rennomer à votre convenance )
+
 ===Makefile===
 
 note :

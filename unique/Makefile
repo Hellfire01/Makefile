@@ -5,18 +5,19 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Sat Aug  9 16:50:58 2014 mat
+## Last update Mon Aug 11 21:31:48 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
 
 NAME	= 	binaire
 
-SRCS	= 	main.c
+SRCS	= 	sources/main.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
-CFLAGS	= 	-Wall -Wextra -g3
+CFLAGS	+= 	-Wall -Wextra -g3
+CFLAGS	+=	-I ./includes
 
 LIBX    =       -L/usr/lib64 -lmlx_$(HOSTTYPE) -L/usr/lib64/x11 -lXext -lX11
 

@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Mon Mar 17 18:08:45 2014 matthieu raynaud de fitte
-## Last update Wed Apr 23 21:47:44 2014 mat
+## Last update Mon Aug 11 21:53:35 2014 mat
 ##
 
 P=/home/mat/epitech/Makefile/unique
@@ -16,9 +16,7 @@ P=/home/mat/epitech/Makefile/unique
 ##    sur votre dossier courant
 
 cp $P/Makefile Makefile
-cp $P/my.h my.h
-cp $P/libmy.a libmy.a
-cp $P/header.h header.h
-cp $P/main.c main.c
+cp -Tr $P/includes includes
+cp -Tr $P/sources sources
 cp -Tr $P/lib lib
 cp -Tr $P/bin bin
