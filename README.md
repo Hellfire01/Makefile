@@ -1,43 +1,34 @@
 Quelques conseils d'utilisation :
 
-le dossier unique est destiné à un unique binaire
-le dossier multiples contient tout le nésséssaire pour une multitude
-de binaires ( un par sous dossier que vous pouvez rennomer à votre convenance )
-
 ===Makefile===
 
 note :
   Ce Makefile est à la norme d'EPITECH, il est néanmoins plus
   grand et comporte des commandes plus complètes qui vous
-  seront, je l'espère, utiles.
+  seront, je l'espère, utiles pour la conception de votre programme.
 
 les commandes spéciales de ce Makefile sont :
 
-  - abs ( recompile la lib, élimine les fichiers temporaires, compile
-          avec des flags )
-  - old ( supprime tous les fichiers temporaires )
+  - abs : compilation avec des couleurs ( équivaut à un "make fclean ; make ;
+           make clean" dans le bash )
 
-  ==> toutes les autres commandes utilisent abs comme base <==
-  - exe ( lance le binaire )
-  - env ( vérifie l'environnement ==> env -i ./binaire )
-  - ech ( vérifie les read ==> echo | ./binaire )
-  - cat ( vérifie l'affichage ==> ./binaire | cat -e )
-  - val ( utilise vangrind ==> valgrind -v -q ./bianaire )
+  - exe : compile avec abs puis lance le binaire
+
+  - val : compile avec abs puis lance le binaire avec valgrind
+
+  - go  : ( et ses 2 variantes ) servent à lancer le binaire via des alias
+          dans le Makefile ou plus simplement pour ne pas avoir à tout
+          écrire avec valgrind
 
 ===copy.sh===
 
 Mettre le chemin sur le script dans le script puis mettre un alias dans
-le .bashrc, cela pemet d'avoir une base ( lib, Makefile, ... ) pour
+le ~/.bashrc, cela pemet d'avoir une base ( lib, Makefile, ... ) pour
 chaque nouveau projet avec une simple commande shell ( gain de temps
 garantit !!! ).
 
 
-===binaires multiples===
-
-En cas d'une multitude de binaires, utiliser le contenu du second dossier
-qui contient un environnement de travail adapté à ce cas
-
-copyb.sh se charge de copier la bonne lib ainsi que le reste, vous n'avez donc
+copy.sh se charge de copier la bonne lib ainsi que le reste, vous n'avez donc
 rien à faire à la main
 
 
