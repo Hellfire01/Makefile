@@ -5,7 +5,7 @@
 ## Login   <raynau_a@epitech.net>
 ## 
 ## Started on  Wed Dec  4 14:06:06 2013 a
-## Last update Tue Aug 12 01:07:49 2014 mat
+## Last update Thu Aug 14 22:00:56 2014 mat
 ## Last update Fri Feb 14 00:26:09 2014 a
 ##
 
@@ -31,7 +31,8 @@ LIB	=	lib/my_putchar.c	\
 		lib/correct.c		\
 		lib/my_scan.c		\
 		lib/errors.c		\
-		lib/my_strcat.c
+		lib/my_strcat.c		\
+		lib/my_get_next_line.c
 
 SRCS	= 	sources/main.c
 
@@ -51,13 +52,11 @@ $(NAME)	:	$(OBJS) $(LOBJS)
 		gcc -o $(NAME) $(OBJS) $(LOBJS) $(#LIBX)
 
 clean	:
-		cd lib && make clean
 		rm -f $(OBJS)
+		rm -f $(LOBJS)
 
 fclean	:	clean
-		cd lib && make fclean
 		rm -f $(NAME)
-		rm -f bin/$(NAME)
 
 re	:	fclean all
 

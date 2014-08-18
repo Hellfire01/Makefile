@@ -5,9 +5,10 @@
 ** Login   <raynau_a@epitech.net>
 ** 
 ** Started on  Sat Feb 22 18:49:16 2014 matthieu raynaud de fitte
-** Last update Sat Aug  9 01:45:56 2014 mat
+** Last update Thu Aug 14 22:09:51 2014 mat
 */
 
+#include <unistd.h>
 #include "my.h"
 
 /*
@@ -46,7 +47,7 @@ void	c_str(char *str, char color)
   if (c != -1)
     my_color(c);
   my_putstr(str);
-  my_putstr("\033[0;0m");
+  write(1, "\033[0;0m", 6);
 }
 
 /*
