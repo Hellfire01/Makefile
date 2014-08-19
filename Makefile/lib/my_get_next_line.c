@@ -5,7 +5,7 @@
 ** Login   <mat@epitech.net>
 ** 
 ** Started on  Wed Jul 30 17:25:33 2014 mat
-** Last update Fri Aug 15 00:11:58 2014 mat
+** Last update Tue Aug 19 18:42:43 2014 mat
 */
 
 #include <stdlib.h>
@@ -20,8 +20,8 @@ char	*get_line(char *out, int nb, const int fd)
   int	size;
   char	*tmp;
 
-  // soucis avec tmp
   tmp = out;
+  // le bug est ici ==> quand out est free() : tmp l'est aussi car ils pointent sur le même string
   free(out);
   size = (nb + 1) * BUFF;
   if ((out = malloc(size * sizeof(char))) == NULL)
@@ -30,9 +30,7 @@ char	*get_line(char *out, int nb, const int fd)
   i = 0;
   while (i < size - BUFF)
     {
-      // debug
-      c_str("i + 1\n", 'c');
-      // tmp[0] pose soucis ==> invalid read
+      // du coup ça plante ici
       out[i] = tmp[i];
       i += 1;
     }
