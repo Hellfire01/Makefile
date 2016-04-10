@@ -3,23 +3,25 @@
 SRCS	=	main.cpp
 
 define my_color
-	@tput setaf $2
-	@tput bold
-	@echo $1
-	@tput sgr0
+    @tput setaf $2
+    @tput bold
+    @echo $1
+    @tput sgr0
 endef
 
 define my_double_color
-	@tput setaf $2
-	@tput bold
-	@echo -n $1
-	@tput setaf $4
-	@tput bold
-	@echo $3
-	@tput sgr0
+    @tput setaf $2
+    @tput bold
+    @echo -n $1
+    @tput setaf $4
+    @tput bold
+    @echo $3
+    @tput sgr0
 endef
 
-CXX	= @clang++
+COMP	= @clang++
+FILE	= cpp
+
 RM	= @rm -rfv
 
 NAME	= binary
@@ -33,16 +35,16 @@ CFLAGS  += -I $(INCDIR)
 #décommenter pour debug
 #CFLAGS  += -g3
 
-OBJS	=	$(SRCS:%.cpp=$(OBJDIR)/%.o)
+OBJS	=	$(SRCS:%.$(FILE)=$(OBJDIR)/%.o)
 
 all	: 	info $(OBJS)
 	$(call my_color, "Linking $(NAME) ...", 3)
-	$(CXX)  -o $(NAME) $(OBJS) $(CFLAGS)
+	$(COMP)  -o $(NAME) $(OBJS) $(CFLAGS)
 
-$(OBJDIR)/%.o:	$(SRCDIR)/%.cpp
+$(OBJDIR)/%.o:	$(SRCDIR)/%.$(FILE)
 	@mkdir -p $(addprefix $(OBJDIR)/, $(SRCS))
 	$(call my_color, "     Compiling $<", 2)
-	$(CXX) -o $@ -c $< $(CFLAGS)
+	$(COMP) -o $@ -c $< $(CFLAGS)
 
 clean	:
 	$(call my_color, "deleting obj folder ...", 4)
