@@ -27,7 +27,7 @@ CXX	= @clang++
 
 RM	= @rm -rfv
 
-NAME	= plazza
+NAME	= binary
 SRCDIR	= sources
 OBJDIR	= .obj
 INCDIR	= includes
