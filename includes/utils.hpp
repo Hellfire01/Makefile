@@ -17,15 +17,9 @@ private:
   std::string _msg;
 };
 
-/* give the position of the character in the string or -1 on error */
-template <typename T>
-int my_isin(char c, T str);
-
-/* replace all tabs by spaces and remove unnecessary spaces */
+/* epur */
 void  epur_str(std::string & str);
 
-/* color a string for output */
-template <typename T>
-void c_str(T str, char color, int thick = 0);
+void c_str(const std::string & str, char color, int thick = 0);
 
 #endif

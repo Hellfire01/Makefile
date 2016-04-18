@@ -1,7 +1,6 @@
 # the super Makefile
 
 SRCS	=	main.cpp					\
-		utils/isin.cpp					\
 		utils/color_str.cpp				\
 		utils/epur_str.cpp				\
 		exception/MyException.cpp
