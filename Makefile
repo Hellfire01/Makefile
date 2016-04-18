@@ -1,6 +1,10 @@
 # the super Makefile
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp					\
+		utils/isin.cpp					\
+		utils/color_str.cpp				\
+		utils/epur_str.cpp				\
+		exception/MyException.cpp
 
 define my_color
     @tput setaf $2
@@ -19,12 +23,11 @@ define my_double_color
     @tput sgr0
 endef
 
-COMP	= @clang++
-FILE	= cpp
+CXX	= @clang++
 
 RM	= @rm -rfv
 
-NAME	= binary
+NAME	= plazza
 SRCDIR	= sources
 OBJDIR	= .obj
 INCDIR	= includes
@@ -32,19 +35,19 @@ INCDIR	= includes
 CFLAGS	+= -W -Wall -Wextra
 CFLAGS  += -std=c++11
 CFLAGS  += -I $(INCDIR)
-#décommenter pour debug
+#decomment for debug
 #CFLAGS  += -g3
 
-OBJS	=	$(SRCS:%.$(FILE)=$(OBJDIR)/%.o)
+OBJS	=	$(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 all	: 	info $(OBJS)
 	$(call my_color, "Linking $(NAME) ...", 3)
-	$(COMP)  -o $(NAME) $(OBJS) $(CFLAGS)
+	$(CXX)  -o $(NAME) $(OBJS) $(CFLAGS)
 
-$(OBJDIR)/%.o:	$(SRCDIR)/%.$(FILE)
+$(OBJDIR)/%.o:	$(SRCDIR)/%.cpp
 	@mkdir -p $(addprefix $(OBJDIR)/, $(SRCS))
 	$(call my_color, "     Compiling $<", 2)
-	$(COMP) -o $@ -c $< $(CFLAGS)
+	$(CXX) -o $@ -c $< $(CFLAGS)
 
 clean	:
 	$(call my_color, "deleting obj folder ...", 4)
