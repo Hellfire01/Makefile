@@ -50,7 +50,7 @@ $(OBJDIR)/%.o:	$(SRCDIR)/%.cpp
 
 clean	:
 	$(call my_color, "deleting obj folder ...", 4)
-	$(RM) .obj
+	$(RM) $(OBJDIR)
 
 fclean	:	clean
 	$(call my_color, "deleting binary ...", 4)
