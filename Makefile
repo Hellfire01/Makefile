@@ -5,22 +5,34 @@ SRCS	=	main.cpp					\
 		utils/epur_str.cpp				\
 		exception/MyException.cpp
 
-define my_color
-    @tput setaf $2
-    @tput bold
-    @echo $1
-    @tput sgr0
-endef
+have_term := $(shell echo $$TERM)
+nope    = xterm
 
-define my_double_color
-    @tput setaf $2
-    @tput bold
-    @echo -n $1
-    @tput setaf $4
-    @tput bold
-    @echo $3
-    @tput sgr0
-endef
+ifneq ($(have_term), $(nope))
+    my_color = @echo $1
+else
+    define my_color =
+        @-tput setaf $2
+        @-tput bold
+        @echo $1
+        @-tput sgr0
+    endef
+endif
+
+ifneq ($(have_term), $(nope))
+    my_double_color = @echo $1
+else
+    define my_double_color =
+        @echo $(have_term)
+        @-tput setaf $2
+        @-tput bold
+        @echo -n $1
+        @-tput setaf $4
+        @-tput bold
+        @echo $3
+        @-tput sgr0
+    endef
+endif
 
 CXX	= @clang++
 
