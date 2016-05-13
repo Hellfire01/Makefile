@@ -20,7 +20,10 @@ else
 endif
 
 ifneq ($(have_term), $(nope))
-    my_double_color = @echo $1
+    define my_double_color =
+        @echo $1
+        @echo $3
+    endef
 else
     define my_double_color =
         @echo $(have_term)
