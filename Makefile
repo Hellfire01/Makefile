@@ -59,7 +59,7 @@ all	: 	info $(OBJS)
 	$(CXX)  -o $(NAME) $(OBJS) $(CFLAGS)
 
 $(OBJDIR)/%.o:	$(SRCDIR)/%.cpp
-	@mkdir -p $(addprefix $(OBJDIR)/, $(SRCS))
+	@mkdir -p $(addprefix $(OBJDIR)/, $(dir $(SRCS)))
 	$(call my_color, "     Compiling $<", 2)
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
